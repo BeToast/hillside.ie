@@ -1,3 +1,4 @@
+import Nav from 'components/Nav';
 
 // scroll  handler
 // import dynamic from 'next/dynamic'
@@ -11,7 +12,7 @@ export default function Template() {
   return (<>
     <main id={mainId} className='flex justify-center items-center'>
       <div className="border-2">
-
+        <Nav/>
       </div>
     </main>
     
