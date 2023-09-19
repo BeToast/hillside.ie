@@ -19,10 +19,6 @@ export const metadata: Metadata = {
   description: 'Hillside Evangelical Church, Greystones',
 }
 
-// //is production?????????????? sheeeesssshhhh!!
-// const isProduction = process.env.NODE_ENV === "production";
-
-
 export default function RootLayout({
   children,
 }: {

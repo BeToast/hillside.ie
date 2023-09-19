@@ -1,37 +1,42 @@
-'use client'
+// 'use client'
 
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
-//for serverside use only
-import { listDir } from './getRoutes';
-import { getRSCModuleInformation } from 'next/dist/build/analysis/get-page-static-info';
+// //for serverside use only
+// import { readRoutes } from './getRoutes';
 
-const Nav: React.FC<{
+// const Nav: React.FC<{
   
-}> = ({
+// }> = ({
   
-}) => {
-  const [routes, setRoutes] = useState<string []>([] as string[]);
+// }) => {
+//   const [routes, setRoutes] = useState<string []>([] as string[]);
 
-  useEffect(() => {
-    async function getRoutes() {
-      setRoutes(await listDir());
-    }
+//   useEffect(() => {
+//     async function getRoutes() {
+//       readRoutes()
+//         .then((r) => {
+//           setRoutes([r]);
+//       })
+//         .catch((err) => {
+//           console.log(err);
+//       });
+//     }
 
-    getRoutes();
-  });
+//     getRoutes();
+//   });
 
-    return (<>
-      <div className='p-4'>
-        {routes === [] as string[] ? 
-          <p>loading...</p>
-        :
-          routes.map((route: string) =>
-            <p key={route}>{route}</p>
-          )
-        }
-      </div>
-    </>);
-}
+//     return (<>
+//       <div className='p-4'>
+//         {routes === [] as string[] ? 
+//           <p>loading...</p>
+//         :
+//           routes.map((route: string) =>
+//             <p key={route}>{route}</p>
+//           )
+//         }
+//       </div>
+//     </>);
+// }
 
-export default Nav;
+// export default Nav;
