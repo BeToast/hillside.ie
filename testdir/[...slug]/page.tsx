@@ -25,6 +25,6 @@ export function generateStaticParams(): Slug[] {
       const tempSlug: Slug = { slug: arrayFromPath(r) } ;
       params.push(tempSlug) ;
     });
-  // console.log(params) ;
+  console.log(params) ;
   return params;
 }

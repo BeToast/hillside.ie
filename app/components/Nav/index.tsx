@@ -1,9 +1,98 @@
+const routes = [
+  [ 'About' ],
+  [ 'About', 'Belief-Statement' ],
+  [ 'About', 'Community' ],
+  [ 'About', 'Constitution' ],
+  [ 'About', 'Greystones' ],
+  [ 'About', 'Teaching' ],
+  [ 'About', 'Worship' ],
+  [ 'Contact' ],
+  [ 'Events' ],
+  [ 'Events', 'Alpha' ],
+  [ 'Events', 'Events-Overview' ],
+  [ 'Events', 'Home-Groups' ],
+  [ 'Events', 'Kids-Sunday-Club' ],
+  [ 'Events', 'Prayer-&-Intercession' ],
+  [ 'Events', 'Womens-Bible-Study' ],
+  [ 'Events', 'Youth-Oxygen-Club' ],
+  [ 'Test' ],
+  [ 'home' ],
+  [ 'home', '$home' ],
+  [ 'home', '$howToFindUs' ],
+  [ 'home', '$newToFaith' ],
+  [ 'home', '$searchingForAnswersAboutGod' ],
+]
+
+export class Route {
+  route: string;
+  display: string;
+  subRoute: Route[];
+
+  constructor(
+    route: string,
+    subRoute: Route[] = [],
+    display: string = route,
+  ) {
+    this.route = route;
+    this.display = display;
+    this.subRoute = subRoute;
+  }
+}
+
+const routeArray: Route[] = [new Route('/', undefined, 'Home')] ;
+
+
+const fillRouteArray = () => {
+  routes.map((route) => {
+    const existingRoute = routeArray.find((r) => r.route === route[0])
+    if(existingRoute){
+      if(route[1]){
+        existingRoute.subRoute.push(new Route(route[1]))
+      }
+    }else{
+      routeArray.push(
+        new Route(route[0], (route[1] ? [new Route(route[1])] : undefined))
+      )
+      // var topRoute = new Route(route[0]) ;
+      // if(route[1]){
+      //   topRoute.subRoute.push(new Route(route[1]))
+      // }
+      // routeArray.push(topRoute);
+    }
+  })
+}
+
+fillRouteArray(); //turn routes object, usually slugs, into instancianted array of Route objects...
+
+
+import RouteSection from "./RouteSection";
+// import RouteButton from "./RouteSection/RouteButton";
+
+const Nav: React.FC<{
+  
+}> = ({
+  
+}) => {
+  return(<>
+    <div>
+      {routeArray.map(route => (
+        <RouteSection
+          route={route}
+        />
+      ))}
+    </div>
+  </>);
+}
+
+export default Nav;
+
+
 // 'use client'
 
-// import { useState, useEffect } from 'react';
+// import useState, useEffect } from 'react';
 
 // //for serverside use only
-// import { readRoutes } from './getRoutes';
+// import readRoutes } from './getRoutes';
 
 // const Nav: React.FC<{
   
