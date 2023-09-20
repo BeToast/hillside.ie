@@ -1,4 +1,4 @@
-import { readdir, readFile } from 'fs/promises';
+
 import { readdirSync } from 'fs';
 
 import PageContent from 'components/PageContent';

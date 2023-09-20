@@ -1,13 +1,12 @@
+import genPage from './genPage';
+
 const PageContent: React.FC<{
   fullPath: string,
 }> = ({
   fullPath,
 }) => {
-
-  console.log(fullPath);
-
   return(<>
-    
+    {genPage(fullPath)}
   </>);
 }
 
