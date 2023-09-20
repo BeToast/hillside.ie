@@ -9,3 +9,4 @@ here is a list:
 - item
 here is **bold**
 here is *italic*  
+here is ***bold italic***
