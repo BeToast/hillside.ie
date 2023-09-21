@@ -4,7 +4,7 @@ import { arrayFromPath, getPage, getRoutes } from 'app/getContent';
 
 export default function Page({ params }: { params: {route: string} }){
 
-  const route = params.route ;
+  const { route } = params ;
 
   return (
     <div>

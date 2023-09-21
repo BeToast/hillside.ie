@@ -1,0 +1,18 @@
+.static-underline {
+  display: inline;
+  position: relative;
+  overflow: hidden;
+}
+.static-underline:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  background: hsl(204, 6%, 30%);
+  height: 1px;
+  transition-property: left right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}

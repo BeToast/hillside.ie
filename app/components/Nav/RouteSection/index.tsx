@@ -8,16 +8,16 @@ const RouteSection: React.FC<{
   route,
 }) => {
   return(<>
-    <div className="flex-col flex-nowrap">
-      <HeadRoute 
-        route={route}
+    <HeadRoute 
+      route={route}
+      clickable={true}
+    />
+    {route.subRoute.map(sub => (
+      <SubRoute
+        headRouteUrl={route.route}
+        route={sub}
       />
-      {route.subRoute.map(sub => (
-        <SubRoute
-          route={sub}
-        />
-      ))}
-    </div>
+    ))}
   </>);
 }
 

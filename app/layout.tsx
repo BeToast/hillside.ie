@@ -1,5 +1,7 @@
-import './globals.css'
-import type { Metadata } from 'next'
+import './globals.css';
+import type { Metadata } from 'next';
+import Nav from 'components/Nav';
+
 
 // font
 import { Vesper_Libre, Arimo, } from 'next/font/google';
@@ -29,8 +31,16 @@ export default function RootLayout({
     <html lang="en" className={`${fontHead.variable} ${fontBody.variable} scroll-smooth`}>
       <head>
       </head>
-      <body className="h-screen w-screen">
-        {children}
+      <body className="h-full w-full">
+        <div className='w-64 fixed hidden lg:block inset-0 overflow-y-auto'>
+          <Nav/>
+        </div>
+        <div className='block lg:ml-64 xl:pr-64 z-10 min-h-screen bg-red-50'>
+          {children}
+          <div className='w-64 fixed hidden xl:block z-20 top-0 right-0 min-h-full overflow-y-auto bg-green-50'>
+
+          </div>
+        </div>
       </body>
     </html>
   )

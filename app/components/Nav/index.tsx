@@ -15,12 +15,26 @@ const routes = [
   [ 'Events', 'Prayer-&-Intercession' ],
   [ 'Events', 'Womens-Bible-Study' ],
   [ 'Events', 'Youth-Oxygen-Club' ],
-  [ 'Test' ],
   [ 'home' ],
   [ 'home', '$home' ],
   [ 'home', '$howToFindUs' ],
   [ 'home', '$newToFaith' ],
   [ 'home', '$searchingForAnswersAboutGod' ],
+  //temp garbage
+  [ 'Test' ],
+  [ 'Test', 'Belief-Statement' ],
+  [ 'Test', 'Community' ],
+  [ 'Test', 'Constitution' ],
+  [ 'Test', 'Greystones' ],
+  [ 'Test', 'Teaching' ],
+  [ 'Test', 'Worship' ],
+  [ 'Test', 'Alpha' ],
+  [ 'Test', 'Events-Overview' ],
+  [ 'Test', 'Home-Groups' ],
+  [ 'Test', 'Kids-Sunday-Club' ],
+  [ 'Test', 'Prayer-&-Intercession' ],
+  [ 'Test', 'Womens-Bible-Study' ],
+  [ 'Test', 'Youth-Oxygen-Club' ],
 ]
 
 export class Route {
@@ -62,7 +76,7 @@ const fillRouteArray = () => {
   })
 }
 
-fillRouteArray(); //turn routes object, usually slugs, into instancianted array of Route objects...
+fillRouteArray(); //turn routes object, slugs, into instancianted array of Route objects...
 
 
 import RouteSection from "./RouteSection";
@@ -74,13 +88,13 @@ const Nav: React.FC<{
   
 }) => {
   return(<>
-    <div>
-      {routeArray.map(route => (
-        <RouteSection
-          route={route}
-        />
-      ))}
-    </div>
+      <div className="flex-col flex-nowrap p-8">
+        {routeArray.map(route => (
+          <RouteSection
+            route={route}
+          />
+        ))}
+      </div>
   </>);
 }
 
