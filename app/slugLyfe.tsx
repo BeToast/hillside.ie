@@ -5,6 +5,20 @@ import PageContent from 'components/PageContent';
 
 const contentPath:string = './app/content/';
 
+type Slug = {
+  slug: string[]
+}
+
+const getSlugs = (): Slug[] => {
+  const params: Slug[] = [] ;
+  getRoutes()
+    .forEach((r) => {
+      const tempSlug: Slug = { slug: arrayFromPath(r) } ;
+      params.push(tempSlug) ;
+    });
+  // console.log(params) ;
+  return params;
+}
 
 const getRoutes = (currDir?: string | null): string[] => {
   if(currDir === undefined) {
@@ -44,9 +58,8 @@ const pathFromArray = (array: string[]):string => {
 }
 
 
-
-export { getPage, getRoutes, arrayFromPath };
-
+export type { Slug };
+export { getSlugs, getPage, getRoutes, arrayFromPath };
 
 
 

@@ -14,6 +14,7 @@ const RouteSection: React.FC<{
     />
     {route.subRoute.map(sub => (
       <SubRoute
+        key={route.route}
         headRouteUrl={route.route}
         route={sub}
       />

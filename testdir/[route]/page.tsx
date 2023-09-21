@@ -1,10 +1,11 @@
-import { arrayFromPath, getPage, getRoutes } from 'app/getContent';
+import { arrayFromPath, getPage, getRoutes } from '@/app/slugLyfe';
 
 
 
 export default function Page({ params }: { params: {route: string} }){
 
   const { route } = params ;
+  console.log(getRoutes());
 
   return (
     <div>
@@ -16,3 +17,4 @@ export default function Page({ params }: { params: {route: string} }){
 export function generateStaticParams() {
   return [{route: 'one'}, {route: 'two'}, {route: 'three'}];
 }
+

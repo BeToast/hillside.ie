@@ -91,6 +91,7 @@ const Nav: React.FC<{
       <div className="flex-col flex-nowrap p-8">
         {routeArray.map(route => (
           <RouteSection
+            key={route.route}
             route={route}
           />
         ))}
