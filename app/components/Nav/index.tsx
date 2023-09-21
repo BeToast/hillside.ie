@@ -1,41 +1,41 @@
-const routes = [
-  [ 'About' ],
-  [ 'About', 'Belief-Statement' ],
-  [ 'About', 'Community' ],
-  [ 'About', 'Constitution' ],
-  [ 'About', 'Greystones' ],
-  [ 'About', 'Teaching' ],
-  [ 'About', 'Worship' ],
-  [ 'Contact' ],
-  [ 'Events' ],
-  [ 'Events', 'Alpha' ],
-  [ 'Events', 'Events-Overview' ],
-  [ 'Events', 'Home-Groups' ],
-  [ 'Events', 'Kids-Sunday-Club' ],
-  [ 'Events', 'Prayer-&-Intercession' ],
-  [ 'Events', 'Womens-Bible-Study' ],
-  [ 'Events', 'Youth-Oxygen-Club' ],
-  [ 'home' ],
-  [ 'home', '$home' ],
-  [ 'home', '$howToFindUs' ],
-  [ 'home', '$newToFaith' ],
-  [ 'home', '$searchingForAnswersAboutGod' ],
-  //temp garbage
-  [ 'Test' ],
-  [ 'Test', 'Belief-Statement' ],
-  [ 'Test', 'Community' ],
-  [ 'Test', 'Constitution' ],
-  [ 'Test', 'Greystones' ],
-  [ 'Test', 'Teaching' ],
-  [ 'Test', 'Worship' ],
-  [ 'Test', 'Alpha' ],
-  [ 'Test', 'Events-Overview' ],
-  [ 'Test', 'Home-Groups' ],
-  [ 'Test', 'Kids-Sunday-Club' ],
-  [ 'Test', 'Prayer-&-Intercession' ],
-  [ 'Test', 'Womens-Bible-Study' ],
-  [ 'Test', 'Youth-Oxygen-Club' ],
-]
+// const routes = [
+//   [ 'About' ],
+//   [ 'About', 'Belief-Statement' ],
+//   [ 'About', 'Community' ],
+//   [ 'About', 'Constitution' ],
+//   [ 'About', 'Greystones' ],
+//   [ 'About', 'Teaching' ],
+//   [ 'About', 'Worship' ],
+//   [ 'Contact' ],
+//   [ 'Events' ],
+//   [ 'Events', 'Alpha' ],
+//   [ 'Events', 'Events-Overview' ],
+//   [ 'Events', 'Home-Groups' ],
+//   [ 'Events', 'Kids-Sunday-Club' ],
+//   [ 'Events', 'Prayer-&-Intercession' ],
+//   [ 'Events', 'Womens-Bible-Study' ],
+//   [ 'Events', 'Youth-Oxygen-Club' ],
+//   [ 'home' ],
+//   [ 'home', '$home' ],
+//   [ 'home', '$howToFindUs' ],
+//   [ 'home', '$newToFaith' ],
+//   [ 'home', '$searchingForAnswersAboutGod' ],
+//   //temp garbage
+//   [ 'Test' ],
+//   [ 'Test', 'Belief-Statement' ],
+//   [ 'Test', 'Community' ],
+//   [ 'Test', 'Constitution' ],
+//   [ 'Test', 'Greystones' ],
+//   [ 'Test', 'Teaching' ],
+//   [ 'Test', 'Worship' ],
+//   [ 'Test', 'Alpha' ],
+//   [ 'Test', 'Events-Overview' ],
+//   [ 'Test', 'Home-Groups' ],
+//   [ 'Test', 'Kids-Sunday-Club' ],
+//   [ 'Test', 'Prayer-&-Intercession' ],
+//   [ 'Test', 'Womens-Bible-Study' ],
+//   [ 'Test', 'Youth-Oxygen-Club' ],
+// ]
 
 export class Route {
   route: string;
@@ -56,8 +56,11 @@ export class Route {
 const routeArray: Route[] = [new Route('/', undefined, 'Home')] ;
 
 
-const fillRouteArray = () => {
-  routes.map((route) => {
+const fillRouteArray = (slugs: Slug[]) => {
+
+  // console.log(slugs);
+  slugs.map((slug) => {
+    const route = slug.slug;
     const existingRoute = routeArray.find((r) => r.route === route[0])
     if(existingRoute){
       if(route[1]){
@@ -74,19 +77,37 @@ const fillRouteArray = () => {
       // routeArray.push(topRoute);
     }
   })
+
+  // routes.map((route) => {
+  //   const existingRoute = routeArray.find((r) => r.route === route[0])
+  //   if(existingRoute){
+  //     if(route[1]){
+  //       existingRoute.subRoute.push(new Route(route[1]))
+  //     }
+  //   }else{
+  //     routeArray.push(
+  //       new Route(route[0], (route[1] ? [new Route(route[1])] : undefined))
+  //     )
+  //     // var topRoute = new Route(route[0]) ;
+  //     // if(route[1]){
+  //     //   topRoute.subRoute.push(new Route(route[1]))
+  //     // }
+  //     // routeArray.push(topRoute);
+  //   }
+  // })
 }
 
-fillRouteArray(); //turn routes object, slugs, into instancianted array of Route objects...
 
-
+import { Slug } from "@/app/slugLyfe";
 import RouteSection from "./RouteSection";
-// import RouteButton from "./RouteSection/RouteButton";
 
 const Nav: React.FC<{
-  
+  slugs: Slug[],
 }> = ({
-  
+  slugs,
 }) => {
+  fillRouteArray(slugs); //turn routes object, slugs, into instancianted array of Route objects...
+
   return(<>
       <div className="flex-col flex-nowrap p-8">
         {routeArray.map(route => (

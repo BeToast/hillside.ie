@@ -29,10 +29,10 @@ e·van·gel·i·cal
 (ê´vàn-jèl¹î-kel, èv´en-) also e·van·gel·ic (-jèl¹îk) adjective
 Abbr. evan., evang.  
 
-1. Of, relating to, or in accordance with the Christian gospel, especially of the four gospel books of the New Testament.  
+- Of, relating to, or in accordance with the Christian gospel, especially of the four gospel books of the New Testament.  
 
 gos·pel
 (gòs¹pel) noun
 
-1. The proclamation of the redemption preached by Jesus and the Apostles, which is the central content of Christian revelation.
-2. Gospel. Bible. One of the first four books of the New Testament, describing the life, death, and resurrection of Jesus and recording his teaching.
+- The proclamation of the redemption preached by Jesus and the Apostles, which is the central content of Christian revelation.
+- Gospel. Bible. One of the first four books of the New Testament, describing the life, death, and resurrection of Jesus and recording his teaching.
