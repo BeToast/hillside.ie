@@ -37,7 +37,8 @@ export default function RootLayout({
       <body className="h-full w-full">
         <div className='w-64 fixed hidden lg:block inset-0 overflow-y-auto'>
           <Nav
-            slugs={slugs}
+            // slugs={slugs}
+            slugs={getSlugs()}
           />
         </div>
         <div className='block lg:ml-64 xl:pr-64 z-10 min-h-screen bg-red-50'>
