@@ -1,42 +1,3 @@
-// const routes = [
-//   [ 'About' ],
-//   [ 'About', 'Belief-Statement' ],
-//   [ 'About', 'Community' ],
-//   [ 'About', 'Constitution' ],
-//   [ 'About', 'Greystones' ],
-//   [ 'About', 'Teaching' ],
-//   [ 'About', 'Worship' ],
-//   [ 'Contact' ],
-//   [ 'Events' ],
-//   [ 'Events', 'Alpha' ],
-//   [ 'Events', 'Events-Overview' ],
-//   [ 'Events', 'Home-Groups' ],
-//   [ 'Events', 'Kids-Sunday-Club' ],
-//   [ 'Events', 'Prayer-&-Intercession' ],
-//   [ 'Events', 'Womens-Bible-Study' ],
-//   [ 'Events', 'Youth-Oxygen-Club' ],
-//   [ 'home' ],
-//   [ 'home', '$home' ],
-//   [ 'home', '$howToFindUs' ],
-//   [ 'home', '$newToFaith' ],
-//   [ 'home', '$searchingForAnswersAboutGod' ],
-//   //temp garbage
-//   [ 'Test' ],
-//   [ 'Test', 'Belief-Statement' ],
-//   [ 'Test', 'Community' ],
-//   [ 'Test', 'Constitution' ],
-//   [ 'Test', 'Greystones' ],
-//   [ 'Test', 'Teaching' ],
-//   [ 'Test', 'Worship' ],
-//   [ 'Test', 'Alpha' ],
-//   [ 'Test', 'Events-Overview' ],
-//   [ 'Test', 'Home-Groups' ],
-//   [ 'Test', 'Kids-Sunday-Club' ],
-//   [ 'Test', 'Prayer-&-Intercession' ],
-//   [ 'Test', 'Womens-Bible-Study' ],
-//   [ 'Test', 'Youth-Oxygen-Club' ],
-// ]
-
 export class Route {
   route: string;
   display: string;
@@ -98,25 +59,26 @@ const fillRouteArray = (slugs: Slug[]) => {
 }
 
 
-import { Slug } from "lib/slugLyfe";
+import { Slug, getSlugs } from "app/slugLyfe";
 import RouteSection from "./RouteSection";
 
 const Nav: React.FC<{
-  slugs: Slug[],
+  // slugs: Slug[],
 }> = ({
-  slugs,
+  // slugs,
 }) => {
-  fillRouteArray(slugs); //turn routes object, slugs, into instancianted array of Route objects...
+
+  fillRouteArray(getSlugs()); //turn routes object, slugs, into instancianted array of Route objects...
 
   return(<>
-      <div className="flex-col flex-nowrap p-8">
-        {routeArray.map(route => (
-          <RouteSection
-            key={route.route}
-            route={route}
-          />
-        ))}
-      </div>
+    <div className="flex-col flex-nowrap p-8">
+      {routeArray.map(route => (
+        <RouteSection
+          key={route.route}
+          route={route}
+        />
+      ))}
+    </div>
   </>);
 }
 

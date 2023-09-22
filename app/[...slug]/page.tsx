@@ -1,5 +1,5 @@
-import { getSlugs, getPage } from 'lib/slugLyfe';
-import type { Slug } from 'lib/slugLyfe';
+import { getSlugs, getPage } from 'app/slugLyfe';
+import type { Slug } from 'app/slugLyfe';
 
 
 

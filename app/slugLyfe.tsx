@@ -3,7 +3,7 @@ import { readdirSync } from 'fs';
 
 import PageContent from 'components/PageContent';
 
-const contentPath:string = './app/lib/content/';
+const contentPath:string = './public/content/';
 
 type Slug = {
   slug: string[]
