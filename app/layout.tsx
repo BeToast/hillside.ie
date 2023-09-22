@@ -1,7 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import Nav from 'components/Nav';
-import { Slug, getSlugs } from './slugLyfe';
+import { Slug, getSlugs } from './lib/slugLyfe';
 
 
 // font
@@ -52,6 +52,6 @@ export default function RootLayout({
 }
 
 
-export function generateStaticParams(): Slug[] {
-  return getSlugs();
-}
+// export function generateStaticParams(): Slug[] {
+//   return getSlugs();
+// }

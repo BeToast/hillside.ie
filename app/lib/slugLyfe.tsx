@@ -3,7 +3,7 @@ import { readdirSync } from 'fs';
 
 import PageContent from 'components/PageContent';
 
-const contentPath:string = './app/content/';
+const contentPath:string = './app/lib/content/';
 
 type Slug = {
   slug: string[]
@@ -38,8 +38,7 @@ const getRoutes = (currDir?: string | null): string[] => {
   return foundDirs;
 }
 
-
-const getPage = (slug: string[]) => {
+const getPage = (slug: string[]): React.ReactNode => {
 
   const fullPath = pathFromArray(slug)
 

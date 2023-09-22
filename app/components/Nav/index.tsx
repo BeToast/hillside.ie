@@ -98,7 +98,7 @@ const fillRouteArray = (slugs: Slug[]) => {
 }
 
 
-import { Slug } from "@/app/slugLyfe";
+import { Slug } from "lib/slugLyfe";
 import RouteSection from "./RouteSection";
 
 const Nav: React.FC<{
