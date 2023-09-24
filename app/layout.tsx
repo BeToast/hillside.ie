@@ -1,8 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import Nav from 'components/Nav';
-import { Slug } from './slugLyfe';
-
 
 // font
 import { Vesper_Libre, Arimo, } from 'next/font/google';
@@ -24,12 +22,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  // slugs,
 }: {
   children: React.ReactNode,
-  // slugs: Slug[],
 }) {
-
   return (
     <html lang="en" className={`${fontHead.variable} ${fontBody.variable} scroll-smooth`}>
       <head>
@@ -48,8 +43,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
-// export function generateStaticParams(): Slug[] {
-//   return getSlugs();
-// }

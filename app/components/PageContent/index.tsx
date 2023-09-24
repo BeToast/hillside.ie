@@ -1,12 +1,14 @@
+import { pathFromArray } from 'helpers/pathHandler';
+import contentPath from "helpers/staticPaths";
 import genPage from './genPage';
 
 const PageContent: React.FC<{
-  fullPath: string,
+  slug: string[],
 }> = ({
-  fullPath,
+  slug,
 }) => {
   return(<>
-    {genPage(fullPath)}
+    {genPage(`${contentPath+pathFromArray(slug)}content.md`)}
   </>);
 }
 

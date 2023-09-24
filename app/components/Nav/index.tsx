@@ -1,3 +1,7 @@
+import { Slug, getSlugs } from "helpers/slugLyfe";
+import RouteSection from "./RouteSection";
+
+
 export class Route {
   route: string;
   display: string;
@@ -14,11 +18,8 @@ export class Route {
   }
 }
 
-const routeArray: Route[] = [new Route('/', undefined, 'Home')] ;
-
 
 const fillRouteArray = (slugs: Slug[]) => {
-
   // console.log(slugs);
   slugs.map((slug) => {
     const route = slug.slug;
@@ -31,45 +32,20 @@ const fillRouteArray = (slugs: Slug[]) => {
       routeArray.push(
         new Route(route[0], (route[1] ? [new Route(route[1])] : undefined))
       )
-      // var topRoute = new Route(route[0]) ;
-      // if(route[1]){
-      //   topRoute.subRoute.push(new Route(route[1]))
-      // }
-      // routeArray.push(topRoute);
     }
   })
-
-  // routes.map((route) => {
-  //   const existingRoute = routeArray.find((r) => r.route === route[0])
-  //   if(existingRoute){
-  //     if(route[1]){
-  //       existingRoute.subRoute.push(new Route(route[1]))
-  //     }
-  //   }else{
-  //     routeArray.push(
-  //       new Route(route[0], (route[1] ? [new Route(route[1])] : undefined))
-  //     )
-  //     // var topRoute = new Route(route[0]) ;
-  //     // if(route[1]){
-  //     //   topRoute.subRoute.push(new Route(route[1]))
-  //     // }
-  //     // routeArray.push(topRoute);
-  //   }
-  // })
 }
 
 
-import { Slug, getSlugs } from "app/slugLyfe";
-import RouteSection from "./RouteSection";
+const routeArray: Route[] = [new Route('/', undefined, 'Home')] ;
+fillRouteArray(getSlugs()); //turn routes object, slugs, into instancianted array of Route objects...
+
 
 const Nav: React.FC<{
-  // slugs: Slug[],
+
 }> = ({
-  // slugs,
+
 }) => {
-
-  fillRouteArray(getSlugs()); //turn routes object, slugs, into instancianted array of Route objects...
-
   return(<>
     <div className="flex-col flex-nowrap p-8">
       {routeArray.map(route => (
@@ -83,47 +59,3 @@ const Nav: React.FC<{
 }
 
 export default Nav;
-
-
-// 'use client'
-
-// import useState, useEffect } from 'react';
-
-// //for serverside use only
-// import readRoutes } from './getRoutes';
-
-// const Nav: React.FC<{
-  
-// }> = ({
-  
-// }) => {
-//   const [routes, setRoutes] = useState<string []>([] as string[]);
-
-//   useEffect(() => {
-//     async function getRoutes() {
-//       readRoutes()
-//         .then((r) => {
-//           setRoutes([r]);
-//       })
-//         .catch((err) => {
-//           console.log(err);
-//       });
-//     }
-
-//     getRoutes();
-//   });
-
-//     return (<>
-//       <div className='p-4'>
-//         {routes === [] as string[] ? 
-//           <p>loading...</p>
-//         :
-//           routes.map((route: string) =>
-//             <p key={route}>{route}</p>
-//           )
-//         }
-//       </div>
-//     </>);
-// }
-
-// export default Nav;
