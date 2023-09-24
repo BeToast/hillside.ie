@@ -1,7 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import Nav from 'components/Nav';
-import { Slug, getSlugs } from './lib/slugLyfe';
+import { Slug } from './slugLyfe';
 
 
 // font
@@ -24,10 +24,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  slugs,
+  // slugs,
 }: {
   children: React.ReactNode,
-  slugs: Slug[],
+  // slugs: Slug[],
 }) {
 
   return (
@@ -36,10 +36,7 @@ export default function RootLayout({
       </head>
       <body className="h-full w-full">
         <div className='w-64 fixed hidden lg:block inset-0 overflow-y-auto'>
-          <Nav
-            // slugs={slugs}
-            slugs={getSlugs()}
-          />
+          <Nav/>
         </div>
         <div className='block lg:ml-64 xl:pr-64 z-10 min-h-screen bg-red-50'>
           {children}

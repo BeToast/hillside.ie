@@ -59,25 +59,26 @@ const fillRouteArray = (slugs: Slug[]) => {
 }
 
 
-import { Slug } from "lib/slugLyfe";
+import { Slug, getSlugs } from "app/slugLyfe";
 import RouteSection from "./RouteSection";
 
 const Nav: React.FC<{
-  slugs: Slug[],
+  // slugs: Slug[],
 }> = ({
-  slugs,
+  // slugs,
 }) => {
-  fillRouteArray(slugs); //turn routes object, slugs, into instancianted array of Route objects...
+
+  fillRouteArray(getSlugs()); //turn routes object, slugs, into instancianted array of Route objects...
 
   return(<>
-      <div className="flex-col flex-nowrap p-8">
-        {routeArray.map(route => (
-          <RouteSection
-            key={route.route}
-            route={route}
-          />
-        ))}
-      </div>
+    <div className="flex-col flex-nowrap p-8">
+      {routeArray.map(route => (
+        <RouteSection
+          key={route.route}
+          route={route}
+        />
+      ))}
+    </div>
   </>);
 }
 
