@@ -4,9 +4,9 @@ const P: React.FC<{
   children,
 }) => {
   return(<>
-    <p className="text-base">
+    <div className="text-base text-justify leading-relaxed hyphens-auto max-w-prose pb-1">
       {children}
-    </p>
+    </div>
   </>);
 }
 

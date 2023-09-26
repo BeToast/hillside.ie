@@ -4,11 +4,9 @@ import { getSlugs } from 'helpers/slugLyfe';
 import PageContent from 'components/PageContent';
 
 export default function Page({ params }: { params: Slug }){
-  return (
-    <div>
-      <PageContent slug={params.slug}/>
-    </div>
-  );
+  return (<>
+    <PageContent slug={params.slug}/>
+  </>);
 }
 
 

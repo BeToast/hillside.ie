@@ -4,7 +4,7 @@ const H2: React.FC<{
   children,
 }) => {
   return(<>
-    <h2 className="text-3xl">
+    <h2 className="text-3xl pt-6 pb-3">
       {children}
     </h2>
   </>);

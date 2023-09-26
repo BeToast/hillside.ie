@@ -1,5 +1,4 @@
-// import { readdir, readFile } from 'fs/promises';
-import { readdirSync, readFileSync } from 'fs';
+import { readFileSync } from 'fs';
 import H1 from './H1';
 import H2 from './H2';
 import Li from './Li';
@@ -19,6 +18,7 @@ export default function genPage(fullPath: string): React.ReactNode {
 
 function parseContent(fullPath: string): React.ReactNode {
   const nodeArray: React.ReactNode[] = [] ;
+  var currliKey: number = 0;
 
   // var wasLi = false ;
   
@@ -38,12 +38,16 @@ function parseContent(fullPath: string): React.ReactNode {
   }
 
   content.split('\n').map(line => {
+
+    line = line.trim();
+
     const twoChars = line.slice(0,2) ;
     const remainderChars = (l: string, i?: number) => l.slice((i ? i : 2)) ;
     if(twoChars === '- '){ //if li
       nodeArray.push(<>
-        <Li>{boldItalics(remainderChars(line))}</Li>
+        <Li key={currliKey}>{boldItalics(remainderChars(line))}</Li>
       </>);
+      currliKey++;
     }else if(twoChars === '# '){ //if h1
       nodeArray.push(<>
         <H1>{boldItalics(remainderChars(line))}</H1>
@@ -52,7 +56,7 @@ function parseContent(fullPath: string): React.ReactNode {
       nodeArray.push(<>
         <H2>{boldItalics(remainderChars(line, 3))}</H2>
       </>);
-    }else{ //if p
+    }else if(line !== ''){ //if p
       nodeArray.push(<>
         <P>{boldItalics(line)}</P>
       </>);
