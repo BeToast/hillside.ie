@@ -6,6 +6,8 @@
   --foreground-rgb: 0, 0, 0;
   /* --background-hsl: hsl(168, 19%, 64%); */
   --background-hsl: hsl(180, 3%, 83%);
+
+  scrollbar-gutter: stable both-edges;
 }
 
 body {

@@ -1,6 +1,6 @@
-# Services & Events
+# Sunday
 
-We meet every Sunday morning for Morning Worship & Teaching, Oxygen, Kids Club & Creche at 10.30am.  
+## Every Sunday at 10:30am  
 Within the service we usually have the following:  
 - Time of music and worship
 - Bible study and teaching

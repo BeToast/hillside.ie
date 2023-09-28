@@ -31,29 +31,6 @@ export default function RootLayout({
       <head>
       </head>
       <body className="">
-        {/* <div className='flex flex-col items-center'>
-          <div className='w-64 fixed hidden lg:block inset-0 overflow-y-auto'>
-            <Nav/>
-          </div>
-          <div className='block lg:ml-64 xl:pr-64 z-10 min-h-screen bg-red-50'>
-            {children}
-            <div className='w-64 fixed hidden xl:block z-20 top-0 right-0 min-h-full overflow-y-auto bg-green-50'>
-
-            </div>
-          </div> */}
-        {/* <div className='flex items-start justify-center min-h-screen'>
-          <div className='fixed inset-0 w-64 hidden lg:block min-h-full overflow-y-auto'>
-            <Nav/>
-          </div>
-          <div className='block min-h-full bg-red-50'>
-            {children}
-          </div>
-          <div className='fixed w-64 hidden xl:block min-h-full overflow-y-auto bg-green-50'>
-            <Nav/>
-          </div>
-          */}
-        {/* </div> */}
-
         <div className='flex items-start justify-center'>
           <div className='relative'>
             {/* left */}

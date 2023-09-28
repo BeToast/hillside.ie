@@ -1,4 +1,6 @@
-# Kid’s Sunday Club
+# For Primary Students
+
+## Kid’s Sunday Club
 Sunday Club is offered for primary school children during the school term. Our kids attend the first part of the Sunday worship service with their families and then go out with their teachers to Sunday Club. We then break into our class/age groups (under 5’s, 5-7, and 8-11 years old) to learn from the bible.
 
 There is also a supervised crèche programme, with lots of toys and games available for the very young.

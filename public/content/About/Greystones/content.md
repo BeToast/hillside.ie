@@ -1,5 +1,6 @@
-# Our Greystones Community
+# Greystones
 
+## Greystones community
 Greystones is a coastal town in County Wicklow, approximately 18 miles south of Ireland’s capital Dublin.
 
 It is a growing and thriving town, taking in neighbouring Delgany village and other surrounding areas, it has a population of approximately 18,000 residents. The town enjoys many good restaurants and shops catering for locals and tourists alike. Despite its size, Greystones retains its’ former village and community atmosphere.
