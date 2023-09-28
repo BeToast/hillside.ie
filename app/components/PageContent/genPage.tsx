@@ -9,7 +9,7 @@ import Bold from './Bold';
 
 export default function genPage(fullPath: string): React.ReactNode {
   return (<>
-    <div className='p-12 space-y-1'>
+    <div className='p-12 space-y-1 max-w-prose'>
       {parseContent(fullPath)}
     </div>
   </>);
@@ -21,7 +21,7 @@ function parseContent(fullPath: string): React.ReactNode {
   var currliKey: number = 0;
 
   // var wasLi = false ;
-  
+
   const content = readFileSync(fullPath, 'utf-8') ;
 
   //return bold and italicized line
