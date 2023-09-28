@@ -4,7 +4,7 @@ const P: React.FC<{
   children,
 }) => {
   return(<>
-    <div className="text-base text-justify leading-relaxed hyphens-auto max-w-prose pb-1">
+    <div className="text-base text-justify leading-relaxed hyphens-auto max-w-text pb-1">
       {children}
     </div>
   </>);

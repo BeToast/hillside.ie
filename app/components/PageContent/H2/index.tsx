@@ -4,9 +4,9 @@ const H2: React.FC<{
   children,
 }) => {
   return(<>
-    <h2 className="text-3xl pt-6 pb-3">
+    <p className="text-3xl pt-6 pb-3 max-w-text tracking-normal leading-tight">
       {children}
-    </h2>
+    </p>
   </>);
 }
 
