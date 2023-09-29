@@ -10,7 +10,7 @@ import Bold from './Bold';
 export default function genPage(fullPath: string): React.ReactNode {
   return (<>
     <div className='lg:w-lg 2xl:mx-16'>
-      <div className='w-full p-12 space-y-1'>
+      <div className='w-full px-12 space-y-1'>
         {parseContent(fullPath)}
       </div>
     </div>

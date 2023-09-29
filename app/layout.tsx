@@ -30,34 +30,21 @@ export default function RootLayout({
     <html lang="en" className={`${fontHead.variable} ${fontBody.variable} scroll-smooth`}>
       <head>
       </head>
-      <body className="font-body ">
+      <body className="font-body">
+        
         <div className='flex justify-center items-center h-40 w-full bg-yellow-50'>
           <div className='font-head text-5xl tracking-widest pt-4'>
             Hillside Evangelical Church, Greystones
           </div>
-          
         </div>
-        <div className='flex items-start justify-center'>
-          <div className='relative'>
-            {/* left */}
-            <div className='absolute'>
-              <div className='fixed hidden lg:block w-64 h-screen overflow-y-auto'>
-                <Nav/>
-              </div>
-            </div>
-            {/* middle */}
-            <div className='relative lg:ml-64 xl:pr-64 z-10'>
-              {children}
-
-              
-            </div>
-            {/* right */}
-            <div className='absolute top-0 right-64 z-20'>
-              <div className='fixed hidden xl:block w-64 h-screen overflow-y-auto'>
-                <Nav/>
-              </div>
-            </div>
-            
+        
+        <div className='flex justify-center items-start'>
+          <div className='sticky top-0 hidden lg:block w-64 h-screen overflow-y-auto'>
+            <Nav/>
+          </div>
+          {children}
+          <div className='sticky top-0 hidden xl:block w-64 h-screen overflow-y-auto'>
+            <Nav/>
           </div>
         </div>
 

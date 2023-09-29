@@ -4,9 +4,9 @@ const H1: React.FC<{
   children,
 }) => {
   return(<>
-    <p className="font-head subpixel-antialiased text-6xl pb-16">
+    <div className="sticky top-0 font-head subpixel-antialiased text-6xl py-14 bg-gray-200">
       {children}
-    </p>
+    </div>
   </>);
 }
 
