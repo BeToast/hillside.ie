@@ -30,7 +30,13 @@ export default function RootLayout({
     <html lang="en" className={`${fontHead.variable} ${fontBody.variable} scroll-smooth`}>
       <head>
       </head>
-      <body className="">
+      <body className="font-body ">
+        <div className='flex justify-center items-center h-40 w-full bg-yellow-50'>
+          <div className='font-head text-5xl tracking-widest pt-4'>
+            Hillside Evangelical Church, Greystones
+          </div>
+          
+        </div>
         <div className='flex items-start justify-center'>
           <div className='relative'>
             {/* left */}

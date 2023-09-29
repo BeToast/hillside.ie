@@ -14,7 +14,12 @@ const config: Config = {
       },
       maxWidth: {
         'text': '600px',
-      }
+      },
+      fontFamily: {
+        // add the css variable and include fallback fonts from tailwind default theme
+        head: 'var(--font-head)',
+        body: 'var(--font-body)',
+      },
     }
   },
   plugins: [],
