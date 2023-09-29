@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        
+      },
       width: {
         'text': '600px',
         'lg': '738px',
@@ -16,7 +19,6 @@ const config: Config = {
         'text': '600px',
       },
       fontFamily: {
-        // add the css variable and include fallback fonts from tailwind default theme
         head: 'var(--font-head)',
         body: 'var(--font-body)',
       },
