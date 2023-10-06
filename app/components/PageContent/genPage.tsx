@@ -8,11 +8,22 @@ import Bold from './Bold';
 
 
 export default function genPage(fullPath: string): React.ReactNode {
+  const horzLine = <>
+    <div className='w-[1px] bg-grey-300'/>
+  </>
+
   return (<>
-    <div className='lg:w-lg 2xl:mx-16'>
-      <div className='w-full px-12 space-y-1'>
-        {parseContent(fullPath)}
+
+    <div className='lg:w-lg 2xl:mx-10 bg-grey-100' >
+
+      <div className='flex flex-row flex-nowrap bg-inherit'>
+        {horzLine}
+        <div className='w-full px-24 space-y-1 pb-16 bg-inherit'>
+          {parseContent(fullPath)}
+        </div>
+        {horzLine}
       </div>
+
     </div>
   </>);
 }

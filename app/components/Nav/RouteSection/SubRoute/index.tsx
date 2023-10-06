@@ -1,5 +1,4 @@
-import LeftUnderline from "components/Underline/LeftUnderline";
-
+import './style.css';
 
 import ActiveLinkStyle from "../ActiveLinkStyle";
 import { Route } from "../..";
@@ -16,17 +15,19 @@ const SubRoute: React.FC<{
   const fullRoute = `/${headRouteUrl}/${route.route}` ;
 
   return(<>
-    <div className="pl-4 py-2 truncate">
+  <Link href={fullRoute}>
+    <div className="rounded-xl mb-[1px] text-grey-800 hover:text-grey-900 hover:bg-grey-100 hover:shadow-sm active:bg-grey-300 active:text-grey-950 ">
       <ActiveLinkStyle
         route={fullRoute}
       >
-        <Link href={fullRoute}>
-          <LeftUnderline>
-            {route.display}
-          </LeftUnderline>
-        </Link>
+        <div className="px-4 py-2 truncate">
+          
+          {route.display}
+        </div>
       </ActiveLinkStyle>
     </div>
+  </Link>
+    
 
   </>);
 }

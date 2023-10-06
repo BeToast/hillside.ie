@@ -5,6 +5,7 @@ import GtagScriptInit from 'components/Gtag/GtagScriptInit';
 
 // font
 import { Vesper_Libre, Arimo, } from 'next/font/google';
+import Header from './components/Header';
 const fontHead = Vesper_Libre({
   subsets: ['latin'],
   weight: ["400"],
@@ -30,15 +31,12 @@ export default function RootLayout({
     <html lang="en" className={`${fontHead.variable} ${fontBody.variable} scroll-smooth`}>
       <head>
       </head>
-      <body className="font-body">
+      <body className="font-body text-grey-950 bg-grey-200 selection:bg-ax1-300">
+        <Header>
+          Hillside Evangelical Church, Greystones
+        </Header>
         
-        <div className='flex justify-center items-center h-40 w-full bg-yellow-50'>
-          <div className='font-head text-5xl tracking-widest pt-4'>
-            Hillside Evangelical Church, Greystones
-          </div>
-        </div>
-        
-        <div className='flex justify-center items-start'>
+        <div className='flex justify-center items-start z-0'>
           <div className='sticky top-0 hidden lg:block w-64 h-screen overflow-y-auto'>
             <Nav/>
           </div>

@@ -3,9 +3,5 @@
 @tailwind utilities;
 
 :root {
-  scrollbar-gutter: stable both-edges;
-}
-
-body {
-  @apply bg-bg;
+  scrollbar-gutter: stable;
 }

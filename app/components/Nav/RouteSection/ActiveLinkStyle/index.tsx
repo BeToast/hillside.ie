@@ -14,7 +14,7 @@ const ActiveLinkStyle: React.FC<{
   const currentRoute = usePathname();
 
   return(<>
-    <div className={`${(currentRoute === route ? 'bg-red-50' : '')}`}>
+    <div className={`${(currentRoute === route ? 'bg-grey-100 shadow-sm text-grey-950' : '')} rounded-xl`}>
       {children}
     </div>
   </>);
