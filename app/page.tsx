@@ -5,12 +5,15 @@
 //   ssr: false,
 // });
 
+import PageContent from "components/PageContent";
+
 export default function Template() {
   const mainId = "home";
 
   return (<>
     <main id={mainId} className=''>
-      home
+      {/* <PageContent slug={['home']}/> */}
+      
     </main>
     
 
