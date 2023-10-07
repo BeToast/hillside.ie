@@ -1,11 +1,12 @@
 import type { Slug } from 'helpers/slugLyfe';
 import { getSlugs } from 'helpers/slugLyfe';
-
-import PageContent from 'components/PageContent';
+import { genPage } from './genPage';
+import contentPath from 'helpers/staticPaths';
+import { pathFromArray } from 'helpers/pathHandler';
 
 export default function Page({ params }: { params: Slug }){
   return (<>
-    <PageContent slug={params.slug}/>
+    { genPage(`${contentPath+pathFromArray(params.slug)}content.md`) }
   </>);
 }
 

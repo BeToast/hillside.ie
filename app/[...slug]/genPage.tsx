@@ -1,35 +1,13 @@
 import { readFileSync } from 'fs';
-import H1 from './H1';
-import H2 from './H2';
-import Li from './Li';
-import P from './P';
-import Italics from './Italics';
-import Bold from './Bold';
+import H1 from '../components/PageContent/H1';
+import H2 from '../components/PageContent/H2';
+import Li from '../components/PageContent/Li';
+import P from '../components/PageContent/P';
+import Italics from '../components/PageContent/Italics';
+import Bold from '../components/PageContent/Bold';
 
 
-export default function genPage(fullPath: string): React.ReactNode {
-  const horzLine = <>
-    <div className='w-[1px] bg-grey-300'/>
-  </>
-
-  return (<>
-
-    <div className='lg:w-lg bg-grey-100 min-h-screen' >
-
-      <div className='flex flex-row flex-nowrap bg-inherit '>
-        {horzLine}
-        <div className='w-full px-24 space-y-1 pb-16 bg-inherit'>
-          {parseContent(fullPath)}
-        </div>
-        {horzLine}
-      </div>
-
-    </div>
-  </>);
-}
-
-
-function parseContent(fullPath: string): React.ReactNode {
+export function genPage(fullPath: string): React.ReactNode {
   const nodeArray: React.ReactNode[] = [] ;
   var currliKey: number = 0;
 
