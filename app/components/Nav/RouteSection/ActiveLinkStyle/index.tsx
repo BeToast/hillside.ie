@@ -13,8 +13,11 @@ const ActiveLinkStyle: React.FC<{
   {/* Get the current route */}
   const currentRoute = usePathname();
 
+
+  const isActive:boolean = currentRoute === route ;
+
   return(<>
-    <div className={`${(currentRoute === route ? 'bg-grey-100 shadow-sm text-grey-950' : '')} rounded-xl`}>
+    <div className={`${(isActive ? 'bg-grey-100 text-grey-950 border-b border-grey-300' : 'border-transparent')} rounded-xl border-b hover:border-grey-300`}>
       {children}
     </div>
   </>);
