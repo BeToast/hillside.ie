@@ -1,4 +1,4 @@
-# For Secondary Students
+# Secondary Students
 
 ## Oxygen Youth Club
 Oxygen is our youth group for secondary school age teenagers. We meet during the Sunday service every first and third Sunday to engage on topics that are relevant to teens and Christianity. Whether you have decided to believe in the truth of the bible and Jesus Christ as our Savior or still have lots of questions about it’s validity and truth, we would love to see and hear you at Oxygen.

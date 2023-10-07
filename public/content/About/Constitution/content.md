@@ -1,4 +1,4 @@
-# Our Church Consitution
+# Consitution
 
 ## Introduction
 The Head of the Church is Christ, and the Bible, God’s Word is our supreme authority in all matters of faith and conduct. The purpose of this constitution is to state the practices of the Church in its life and government.

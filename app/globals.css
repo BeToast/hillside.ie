@@ -5,3 +5,32 @@
 :root {
   scrollbar-gutter: stable;
 }
+/* width */
+::-webkit-scrollbar { 
+  @apply w-[14px] ;
+} 
+.nav-scroll::-webkit-scrollbar { 
+  @apply w-2 ;
+} 
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-transparent ;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-grey-500 ;
+  @apply rounded-2xl ;
+  @apply border-2 ;
+  border: solid transparent ;
+  background-clip: content-box ;
+}
+.nav-scroll::-webkit-scrollbar-thumb {
+  @apply border ;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover { 
+  @apply bg-grey-700 ; 
+  /* @apply shadow-sm ; */
+}

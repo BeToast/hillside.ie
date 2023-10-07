@@ -14,9 +14,9 @@ export default function genPage(fullPath: string): React.ReactNode {
 
   return (<>
 
-    <div className='lg:w-lg 2xl:mx-10 bg-grey-100' >
+    <div className='lg:w-lg bg-grey-100 min-h-screen' >
 
-      <div className='flex flex-row flex-nowrap bg-inherit'>
+      <div className='flex flex-row flex-nowrap bg-inherit '>
         {horzLine}
         <div className='w-full px-24 space-y-1 pb-16 bg-inherit'>
           {parseContent(fullPath)}

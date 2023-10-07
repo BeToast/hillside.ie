@@ -1,6 +1,9 @@
+//local
 import './globals.css';
-import type { Metadata } from 'next';
 import Nav from 'components/Nav';
+
+//external
+import type { Metadata } from 'next';
 import GtagScriptInit from 'components/Gtag/GtagScriptInit';
 
 // font
@@ -37,11 +40,11 @@ export default function RootLayout({
         </Header>
         
         <div className='flex justify-center items-start z-0'>
-          <div className='sticky top-0 hidden lg:block w-64 h-screen overflow-y-auto'>
+          <div className='nav-scroll sticky top-0 hidden lg:block w-64 h-screen overflow-y-auto'>
             <Nav/>
           </div>
           {children}
-          <div className='sticky top-0 hidden xl:block w-64 h-screen overflow-y-auto'>
+          <div className='nav-scroll sticky top-0 hidden xl:block w-64 h-screen overflow-y-auto'>
             <Nav/>
           </div>
         </div>

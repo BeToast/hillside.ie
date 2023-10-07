@@ -1,9 +1,11 @@
-# What We Believe
+# Faith Statement
+
+## What is a statement of faith?
 Following is the Hillside Evangelical Church statement of faith, which is the conventional way of stating publicly what this church believes. It seeks to state clearly and briefly those core elements of faith that govern all that we do in our church. These are core convictions of biblical teaching and faith that hold us together as a church.
 
 While it is important to identify the core beliefs of the church we recognise that there is a range of understandings and beliefs in the Christian church. It is on these core, essential areas (below) that we seek unity and on other less-essential areas we seek to practice charity and understanding.
 
-## Statement of Faith
+## Our Statement of Faith
 The Head of the Church is Christ, and the Bible, God’s Word is our supreme authority in all matters of faith and conduct.
 The doctrinal basis of the Church shall be the fundamental truths of Christianity, as revealed in Holy Scripture, including:
 

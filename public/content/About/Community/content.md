@@ -1,4 +1,4 @@
-# Who We Are
+# Community
 
 ## Hillside Evangelical Church community
 

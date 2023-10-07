@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     colors: {
       'inherit': 'inherit',
+      'transparent': 'transparent',
       
       // bg: 'hsl(25, 92%, 95%)', // pri-100'
 
