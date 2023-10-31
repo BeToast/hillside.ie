@@ -30,7 +30,6 @@ const getRoutes = (currDir?: string | null): string[] => {
         foundDirs.push(currDirRelative() + dir.name);
         foundDirs = foundDirs.concat(getRoutes(currDirRelative() + dir.name));
       })
-
   return foundDirs;
 }
 

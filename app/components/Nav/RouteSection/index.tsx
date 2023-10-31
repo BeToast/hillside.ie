@@ -8,10 +8,11 @@ const RouteSection: React.FC<{
   route,
 }) => {
   return(<>
-    <HeadRoute 
+    <HeadRoute
       route={route}
-      clickable={true}
+      clickable={false}
     />
+    <div>
     {route.subRoute.map(sub => (
       <SubRoute
         key={route.route}
@@ -19,6 +20,7 @@ const RouteSection: React.FC<{
         route={sub}
       />
     ))}
+    </div>
   </>);
 }
 

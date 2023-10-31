@@ -9,26 +9,23 @@ import Bold from '../components/PageContent/Bold';
 
 export function genPage(fullPath: string): React.ReactNode {
   const nodeArray: React.ReactNode[] = [] ;
-  var currliKey: number = 0;
-
-  // var wasLi = false ;
 
   const content = readFileSync(fullPath, 'utf-8') ;
 
   //return bold and italicized line
   const boldItalics = (line: string): React.ReactNode => {
     return(<> 
-      {line.split('**') //split string for bold
-        .map((lineBoldSplit, indexBold) => {
+      {line.split('**') .map((lineBoldSplit, indexBold) => { //split string for bold
           const italicsOut = lineBoldSplit.split('*') //split string for italics
-            .map((l, indexItalics) => {return (indexItalics%2 ? <Italics>{l}</Italics> : <>{l}</>)}) //italicize if odd index
-          return (indexBold%2 ? <Bold>{italicsOut}</Bold> : <>{italicsOut}</>) ; //bold if odd index
+            .map((l, indexItalics) => {return (indexItalics%2 ? <Italics key={indexItalics}>{l}</Italics> : <span key={indexItalics}>{l}</span>)}) //italicize if odd index
+          return (indexBold%2 ? <Bold key={indexBold}>{italicsOut}</Bold> : <span key={indexBold}>{italicsOut}</span>) ; //bold if odd index
         })
       }
     </>);
+    // return line;
   }
 
-  content.split('\n').map(line => {
+  content.split('\n').map((line, indexLine) => {
 
     line = line.trim();
 
@@ -36,24 +33,22 @@ export function genPage(fullPath: string): React.ReactNode {
     const remainderChars = (l: string, i?: number) => l.slice((i ? i : 2)) ;
     if(twoChars === '- '){ //if li
       nodeArray.push(<>
-        <Li key={currliKey}>{boldItalics(remainderChars(line))}</Li>
+        <Li key={indexLine}>{boldItalics(remainderChars(line))}</Li>
       </>);
-      currliKey++;
     }else if(twoChars === '# '){ //if h1
       nodeArray.push(<>
-        <H1>{boldItalics(remainderChars(line))}</H1>
+        <H1 key={indexLine}>{boldItalics(remainderChars(line))}</H1>
       </>);
     }else if(line.slice(0,3) === '## '){ //if h2
       nodeArray.push(<>
-        <H2>{boldItalics(remainderChars(line, 3))}</H2>
+        <H2 key={indexLine}>{boldItalics(remainderChars(line, 3))}</H2>
       </>);
     }else if(line !== ''){ //if p
       nodeArray.push(<>
-        <P>{boldItalics(line)}</P>
+        <P key={indexLine}>{boldItalics(line)}</P>
       </>);
     }
   })
-
 
   return nodeArray;
 }

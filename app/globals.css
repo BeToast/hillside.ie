@@ -6,7 +6,7 @@
   scrollbar-gutter: stable;
 }
 /* width */
-::-webkit-scrollbar { 
+::-webkit-scrollbar {
   @apply w-[14px] ;
 } 
 .nav-scroll::-webkit-scrollbar { 
@@ -31,6 +31,5 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover { 
-  @apply bg-grey-700 ; 
-  /* @apply shadow-sm ; */
+  @apply bg-grey-700 ;
 }
