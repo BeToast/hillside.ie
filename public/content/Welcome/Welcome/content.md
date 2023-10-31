@@ -1,4 +1,6 @@
-# Welcome to Hillside Evangelical Church
+# Welcome!
+
+## Welcome to Hillside Evangelical Church
 
 Hillside Evangelical Church is a community church that has been meeting in the heart of Greystones for over 100 years.
 

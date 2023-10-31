@@ -1,5 +1,6 @@
 # Contact Us
-We’d love to hear from you 🙂
+
+## We’d love to hear from you 🙂
 
 If you have any questions, comments or you would like to get in touch with us, please use the online form below and we will get back to you as soon as we can. A  copy of our Donor’s Charter is available on request.
 

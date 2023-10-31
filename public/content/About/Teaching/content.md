@@ -1,4 +1,6 @@
 # Teaching
+
+## We teach from the Bible
 Bible teaching and study is a core part of what we do when we meet on Sundays and in the various small groups.
 
 Mostly we teach through various books of the Bible or on specific themes from scripture. We also look at issues and seek to understand how Biblical principles are relevant to how we make decisions and therefore how we should live.

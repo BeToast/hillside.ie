@@ -45,7 +45,7 @@ export default function RootLayout({
           </div>
           {children}
           <div className='nav-scroll sticky top-0 hidden xl:block w-64 h-screen overflow-y-auto'>
-            <Nav/>
+            {/* <Nav/> */}
           </div>
         </div>
 

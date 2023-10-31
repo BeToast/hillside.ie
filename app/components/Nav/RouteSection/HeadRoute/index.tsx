@@ -11,10 +11,6 @@ const HeadRoute: React.FC<{
   clickable = true,
 }) => {
 
-
-// const activeSegment = useSelectedLayoutSegment()
-// console.log(useSelectedLayoutSegment());
-
   return(<>
     
       <div className="font-semibold pl-1 pt-3 pb-2 first:pt-0 truncate">

@@ -12,7 +12,7 @@ const RouteSection: React.FC<{
       route={route}
       clickable={false}
     />
-    <div>
+    <div className=''>
     {route.subRoute.map(sub => (
       <SubRoute
         key={route.route}

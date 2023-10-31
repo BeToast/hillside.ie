@@ -7,7 +7,7 @@ const H1: React.FC<{
 }) => {
   return(<>
     <div className="sticky top-0 font-head subpixel-antialiased text-6xl bg-inherit">
-      <div className="pt-16 pb-12">
+      <div className="pt-16 pb-12 px-4">
         {children}
       </div>
       <Hr/>
