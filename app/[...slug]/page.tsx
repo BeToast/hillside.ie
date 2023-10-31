@@ -5,8 +5,10 @@ import contentPath from 'helpers/staticPaths';
 import { pathFromArray } from 'helpers/pathHandler';
 
 export default function Page({ params }: { params: Slug }){
+  const slugPath = pathFromArray(params.slug);
+  
   return (<>
-    { genPage(`${contentPath+pathFromArray(params.slug)}content.md`) }
+    { genPage(`${contentPath+slugPath}content.md`, slugPath) }
   </>);
 }
 

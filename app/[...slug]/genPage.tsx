@@ -5,9 +5,10 @@ import Li from '../components/PageContent/Li';
 import P from '../components/PageContent/P';
 import Italics from '../components/PageContent/Italics';
 import Bold from '../components/PageContent/Bold';
+import Img from '../components/PageContent/Img';
 
 
-export function genPage(fullPath: string): React.ReactNode {
+export function genPage(fullPath: string, slugPath: string): React.ReactNode {
   const nodeArray: React.ReactNode[] = [] ;
 
   const content = readFileSync(fullPath, 'utf-8') ;
@@ -38,6 +39,10 @@ export function genPage(fullPath: string): React.ReactNode {
     }else if(twoChars === '# '){ //if h1
       nodeArray.push(<>
         <H1 key={indexLine}>{boldItalics(remainderChars(line))}</H1>
+      </>);
+    }else if(twoChars === '£ '){ //if img
+      nodeArray.push(<>
+        <Img slugPath={slugPath} fileName={remainderChars(line)} key={indexLine}/>
       </>);
     }else if(line.slice(0,3) === '## '){ //if h2
       nodeArray.push(<>

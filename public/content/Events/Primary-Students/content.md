@@ -18,7 +18,10 @@ We are seeking to teach children about the love God has for each one of them, a 
 - have fun!
 We use the “The Good Book” bible based children’s resource material – *Click*, and at the moment we are using some of the following programmes;
 
+£ click.webp
+
 ## *Click* (for under 5s)
+
 Colouring, Stories, Crafts and much more….
 Children under 5 are bubbling with life; everything is new, exciting and just waiting to be discovered. They are in the busiest time of their lives when they will learn more than at any other time and, crucially, when their brains establish learning pathways. They are receptive to God, to hearing him in ways that many of us have lost as we have grown up, and to having the sort of faith that Jesus wants us all to have.
 
