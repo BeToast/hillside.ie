@@ -6,6 +6,7 @@ import P from '../components/PageContent/P';
 import Italics from '../components/PageContent/Italics';
 import Bold from '../components/PageContent/Bold';
 import Img from '../components/PageContent/Img';
+import { El } from '../components/PageContent/type';
 
 
 export function genPage(fullPath: string, slugPath: string): React.ReactNode {
@@ -26,6 +27,8 @@ export function genPage(fullPath: string, slugPath: string): React.ReactNode {
     // return line;
   }
 
+  var previousEl: El = null;
+
   content.split('\n').map((line, indexLine) => {
 
     line = line.trim();
@@ -36,22 +39,28 @@ export function genPage(fullPath: string, slugPath: string): React.ReactNode {
       nodeArray.push(<>
         <Li key={indexLine}>{boldItalics(remainderChars(line))}</Li>
       </>);
+      previousEl = 'Li';
     }else if(twoChars === '# '){ //if h1
       nodeArray.push(<>
         <H1 key={indexLine}>{boldItalics(remainderChars(line))}</H1>
       </>);
+      previousEl = 'H1';
     }else if(twoChars === '£ '){ //if img
+      const imgLineSplit = remainderChars(line).split(' ');
       nodeArray.push(<>
-        <Img slugPath={slugPath} fileName={remainderChars(line)} key={indexLine}/>
+        <Img slugPath={slugPath} fileName={imgLineSplit[0]} position={imgLineSplit[1]} previousEl={previousEl} key={indexLine}/>
       </>);
+      previousEl = 'Img';
     }else if(line.slice(0,3) === '## '){ //if h2
       nodeArray.push(<>
         <H2 key={indexLine}>{boldItalics(remainderChars(line, 3))}</H2>
       </>);
+      previousEl = 'H2';
     }else if(line !== ''){ //if p
       nodeArray.push(<>
         <P key={indexLine}>{boldItalics(line)}</P>
       </>);
+      previousEl = 'P';
     }
   })
 

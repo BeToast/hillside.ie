@@ -1,5 +1,7 @@
 # Greystones
 
+£ greystonesHarbour.webp center
+
 ## Greystones community
 Greystones is a coastal town in County Wicklow, approximately 18 miles south of Ireland’s capital Dublin.
 

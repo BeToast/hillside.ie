@@ -18,7 +18,7 @@ We are seeking to teach children about the love God has for each one of them, a 
 - have fun!
 We use the “The Good Book” bible based children’s resource material – *Click*, and at the moment we are using some of the following programmes;
 
-£ click.webp
+£ click.webp right
 
 ## *Click* (for under 5s)
 

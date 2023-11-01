@@ -1,0 +1,1 @@
+export type El = 'H1' | 'H2' | 'Li' | 'P' | 'Img' | null;

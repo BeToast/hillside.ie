@@ -6,6 +6,8 @@ Hillside Evangelical Church is a community church that has been meeting in the h
 
 One of the things you will find we have in common is that we are a people who are seeking to explore and develop the reality of our Christian faith. We are a church that does not seek to find God through a set of rules and procedures. You can’t know someone in this way. However, God can be known, in a personal and real way. All that we do at Hillside seeks to encourage people to know God in a better way and to build a faith in God that is real and that impacts lives and relationships in the church and out into the local community.
 
+£ hillsidechurch.webp center
+
 ## So, if you come along what can you expect?
 
 You will find us serious about knowing and worshipping God and anxious to learn more about him and to experience him through the teaching of his word, the Bible. But we are seeking to do that in a way that is relaxed and inclusive of everyone, whatever your experience of the Christian faith is. We seek to be real and honest about the realities of life and how God is involved in the details of our lives. Therefore there are moments of joy and celebration along with times of reflection and sorrow, as we seek to support one another through good and tough times.
