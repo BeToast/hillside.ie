@@ -1,6 +1,15 @@
 import Image from 'next/image'
 import { El } from '../type';
 
+/*
+
+  Image to be called in document as £ [file]$[position]
+  
+  example:
+    £ click.webp?right
+
+*/
+
 const Img: React.FC<{
   slugPath: string,
   fileName: string,
@@ -12,35 +21,44 @@ const Img: React.FC<{
   position,
   previousEl,
 }) => {
+  //position input invalid input checker
+  if(position !== 'center' && position !== 'right') {
+    console.warn('The string is not "right" or "center" defaulting to "center"');
+    position = 'center';
+  }
 
   //img element
   const img: React.ReactElement = <>
     <img
-      className='rounded-2xl shadow-inner border border-grey-500'
+      className='rounded-lg shadow-inner border border-grey-800'
       src={`/content/${slugPath+fileName}`}
       alt={fileName}
     />
   </>
 
+  const getConditionalStyles = (previousEl: string, position: string): string => {
+    var styles: string[] = [];
 
-  //make sure position is center or right
-  if(position !== 'center' && position !== 'right') {
-    console.warn('The string is not "right" or "center" defaulting to "center"');
-    position = 'center';
+    //just previousEl
+    if(previousEl === 'H1') styles.push('pt-0 mt-0')
+
+    //just position
+    if(position === 'center') styles.push('float-none')
+    else if(position === 'right') styles.push('float-right pt-12 ml-8 pb-4')
+
+    //combos
+    // if(previousEl === 'H2' && position === 'right') styles.push('') 
+
+
+    return styles.join(' ');
   }
-  if(position === 'center'){ //if center
-    return <>
-      <div className='Img float-none pt-8 pb-6 px-4'>
-        {img}
-      </div>
-    </>
-  }else if(position === 'right'){ //if right
-    return <>
-      <div className='Img float-right ml-8 pb-8 pt-12 '>
-        {img}
-      </div>
-    </>
-  }
+
+
+  return (<>
+    <div className={`Img px-4 ${getConditionalStyles(previousEl, position)}`}>
+      {img}
+    </div>
+  </>);
 }
 
 export default Img;

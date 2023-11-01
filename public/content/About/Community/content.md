@@ -1,12 +1,12 @@
-# Community
+# Community?false
+
+£ hillsidechurch.webp?center
 
 ## Hillside Evangelical Church community
 
 Hillside Evangelical Church is a community church that has been meeting in the heart of Greystones for over 120 years. The congregation consists of people from Greystones, Delgany, Kilcoole, Bray and from further a field. It is a mixed congregation gathering people from many walks of life, from a variety of cultural and religious backgrounds. Sunday, by Sunday you will see families with young children and teenagers mixing with those who are more senior in years.
 
 One of the things you will find we have in common is that we are a people who are seeking to explore and develop the reality of our Christian faith. We are a church that does not seek to find God through a set of rules and procedures. You can’t know someone in this way. However, God can be known, in a personal and real way. All that we do at Hillside seeks to encourage people to know God in a better way and to build a faith in God that is real and that impacts lives and relationships in the church and out into the local community.
-
-£ hillsidechurch.webp center
 
 ## So, if you come along what can you expect?
 

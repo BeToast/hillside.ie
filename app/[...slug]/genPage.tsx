@@ -6,6 +6,7 @@ import P from '../components/PageContent/P';
 import Italics from '../components/PageContent/Italics';
 import Bold from '../components/PageContent/Bold';
 import Img from '../components/PageContent/Img';
+import Hr from 'components/PageContent/Hr';
 import { El } from '../components/PageContent/type';
 
 
@@ -27,7 +28,7 @@ export function genPage(fullPath: string, slugPath: string): React.ReactNode {
     // return line;
   }
 
-  var previousEl: El = null;
+  var previousEl: El;
 
   content.split('\n').map((line, indexLine) => {
 
@@ -41,12 +42,13 @@ export function genPage(fullPath: string, slugPath: string): React.ReactNode {
       </>);
       previousEl = 'Li';
     }else if(twoChars === '# '){ //if h1
+      const headLineSplit = remainderChars(line).split('?');
       nodeArray.push(<>
-        <H1 key={indexLine}>{boldItalics(remainderChars(line))}</H1>
+        <H1 key={indexLine} showHrBeforeScroll={headLineSplit[1]}>{boldItalics(headLineSplit[0])}</H1>
       </>);
       previousEl = 'H1';
     }else if(twoChars === '£ '){ //if img
-      const imgLineSplit = remainderChars(line).split(' ');
+      const imgLineSplit = remainderChars(line).split('?');
       nodeArray.push(<>
         <Img slugPath={slugPath} fileName={imgLineSplit[0]} position={imgLineSplit[1]} previousEl={previousEl} key={indexLine}/>
       </>);

@@ -5,8 +5,6 @@
 //   ssr: false,
 // });
 
-import PageContent from "components/PageContent";
-
 export default function Template() {
   const mainId = "home";
 
