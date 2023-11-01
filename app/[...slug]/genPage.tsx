@@ -44,7 +44,7 @@ export function genPage(fullPath: string, slugPath: string): React.ReactNode {
     }else if(twoChars === '# '){ //if h1
       const headLineSplit = remainderChars(line).split('?');
       nodeArray.push(<>
-        <H1 key={indexLine} showHrBeforeScroll={headLineSplit[1]}>{boldItalics(headLineSplit[0])}</H1>
+        <H1 key={indexLine} hideHrAtTop={headLineSplit[1]}>{boldItalics(headLineSplit[0])}</H1>
       </>);
       previousEl = 'H1';
     }else if(twoChars === '£ '){ //if img

@@ -4,12 +4,13 @@ const Header: React.FC<{
   children,
 }) => {
   return(<> 
-    <div className='flex justify-center items-center h-40 w-full z-50 bg-grey-50'>
-      <div className='font-head text-5xl tracking-widest pt-4'>
-        {children}
+    <div className='header'>
+      <div className='flex justify-center items-center h-40 w-full z-50 bg-grey-50'>
+        <div className='font-head text-5xl tracking-widest pt-4'>
+          {children}
+        </div>
       </div>
-    </div>
-    <div className="h-[1px] w-full bg-grey-500" />
+      <div className="h-[1px] w-full bg-grey-500" />
     {/* <div className='flex justify-center items-center h-40 w-full z-50 mb-2 bg-pri-50 shadow-md'>
       <div className='font-head text-5xl tracking-widest pt-4'>
         {children}
@@ -20,6 +21,7 @@ const Header: React.FC<{
         {children}
       </div>
     </div> */}
+    </div>
   </>);
 }
 

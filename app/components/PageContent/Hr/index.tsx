@@ -1,21 +1,15 @@
-'use client'
-
-import { setScrollHandlerHr } from "./client";
+import { hideHrAtTopClass } from "./static";
 
 const Hr: React.FC<{
   className?: string,
-  showHrBeforeScroll?: boolean,
+  hideHrAtTop?: boolean,
 }> = ({
   className = '',
-  showHrBeforeScroll = true,
+  hideHrAtTop = false,
 }) => {
 
-  if(!showHrBeforeScroll){
-    setScrollHandlerHr();
-  }
-
   return(<>
-    <div className={`Hr ${className} h-[1px] bg-grey-800 rounded-lg mx-4 ${(showHrBeforeScroll ? 'block' : 'hidden')}`} />
+    <div className={`Hr ${className} h-[1px] rounded-lg mx-4 ${(hideHrAtTop ? `${hideHrAtTopClass} bg-transparent` : 'bg-grey-800')}`} />
   </>);
 }
 export default Hr;

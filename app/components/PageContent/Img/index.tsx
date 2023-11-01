@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { El } from '../type';
+import { afterH1Class } from '../Hr/static';
 
 /*
 
@@ -40,7 +41,7 @@ const Img: React.FC<{
     var styles: string[] = [];
 
     //just previousEl
-    if(previousEl === 'H1') styles.push('pt-0 mt-0')
+    if(previousEl === 'H1') styles.push(`${afterH1Class} pt-0 mt-0`)
 
     //just position
     if(position === 'center') styles.push('float-none')

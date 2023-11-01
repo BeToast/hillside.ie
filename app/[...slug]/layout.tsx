@@ -13,9 +13,9 @@ export default function Layout({
 
       <div className='flex flex-row flex-nowrap bg-inherit '>
         {vertLine}
-        <div className='w-full px-20 pb-16 bg-inherit'>
-          {children}
-        </div>
+        
+        {children}
+        
         {vertLine}
       </div>
 

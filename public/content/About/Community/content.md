@@ -1,4 +1,4 @@
-# Community?false
+# Community?true
 
 £ hillsidechurch.webp?center
 
