@@ -11,7 +11,7 @@ export default function Template({
   return (<>
     {children}
     <Suspense fallback={null}>
-      <GtagRouteListener />
+      {/* <GtagRouteListener /> */}
     </Suspense>
   </>);
 }

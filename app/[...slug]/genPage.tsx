@@ -1,13 +1,13 @@
 import { readFileSync } from 'fs';
-import H1 from '../components/PageContent/H1';
-import H2 from '../components/PageContent/H2';
-import Li from '../components/PageContent/Li';
-import P from '../components/PageContent/P';
-import Italics from '../components/PageContent/Italics';
-import Bold from '../components/PageContent/Bold';
-import Img from '../components/PageContent/Img';
-import Hr from 'components/PageContent/Hr';
-import { El } from '../components/PageContent/type';
+import H1 from 'components/PageContent/H1';
+import H2 from 'components/PageContent/H2';
+import Li from 'components/PageContent/Li';
+import P from 'components/PageContent/P';
+import Italics from 'components/PageContent/Italics';
+import Bold from 'components/PageContent/Bold';
+import Img from 'components/PageContent/Img';
+import { El } from 'components/PageContent/type';
+import Landing from 'components/PageContent/Landing';
 
 
 export function genPage(fullPath: string, slugPath: string): React.ReactNode {
@@ -36,29 +36,48 @@ export function genPage(fullPath: string, slugPath: string): React.ReactNode {
 
     const twoChars = line.slice(0,2) ;
     const remainderChars = (l: string, i?: number) => l.slice((i ? i : 2)) ;
-    if(twoChars === '- '){ //if li
+    //if  '- '  then <Li>
+    if(twoChars === '- '){
       nodeArray.push(<>
         <Li key={indexLine}>{boldItalics(remainderChars(line))}</Li>
       </>);
       previousEl = 'Li';
-    }else if(twoChars === '# '){ //if h1
+    }
+    //if  '# '  then <H1>
+    else if(twoChars === '# '){
       const headLineSplit = remainderChars(line).split('?');
       nodeArray.push(<>
         <H1 key={indexLine} hideHrAtTop={headLineSplit[1]}>{boldItalics(headLineSplit[0])}</H1>
       </>);
       previousEl = 'H1';
-    }else if(twoChars === '£ '){ //if img
+    }
+    //if  '£ '  then <Img>
+    else if(twoChars === '£ '){
       const imgLineSplit = remainderChars(line).split('?');
       nodeArray.push(<>
         <Img slugPath={slugPath} fileName={imgLineSplit[0]} position={imgLineSplit[1]} previousEl={previousEl} key={indexLine}/>
       </>);
       previousEl = 'Img';
-    }else if(line.slice(0,3) === '## '){ //if h2
+    }
+    //if  '€ '  then <Landing>
+    else if(twoChars === '€ '){ 
+      const landingLineSplit = remainderChars(line).split('?');
+      nodeArray.push(<>
+        <Landing fileName={landingLineSplit[0]} key={indexLine}>
+          {landingLineSplit[1]}
+        </Landing>
+      </>);
+      previousEl = 'Img';
+    }
+    //if  '## '  then <H2>
+    else if(line.slice(0,3) === '## '){ 
       nodeArray.push(<>
         <H2 key={indexLine}>{boldItalics(remainderChars(line, 3))}</H2>
       </>);
       previousEl = 'H2';
-    }else if(line !== ''){ //if p
+    }
+    //else its a <P> if line is not empty
+    else if(line !== ''){ 
       nodeArray.push(<>
         <P key={indexLine}>{boldItalics(line)}</P>
       </>);

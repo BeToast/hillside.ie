@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { El } from '../type';
 import { afterH1Class } from '../Hr/static';
 

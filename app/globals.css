@@ -33,3 +33,16 @@
 ::-webkit-scrollbar-thumb:hover { 
   @apply bg-grey-700 ;
 }
+
+.body-hide{
+  width: 0px;
+  height: 0px;
+  overflow: clip;
+}
+
+.body-show{
+  width: auto;
+  height: auto;
+  overflow: auto;
+  transition: width 0.3s, height 0.3s, ease;
+}
