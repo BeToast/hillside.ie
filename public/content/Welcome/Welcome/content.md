@@ -1,5 +1,3 @@
-€ greystonesAerial.webp?Landing Page, wow its Big
-
 # Welcome!
 
 ## Welcome to Hillside Evangelical Church

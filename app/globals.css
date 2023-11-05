@@ -34,15 +34,15 @@
   @apply bg-grey-700 ;
 }
 
-.body-hide{
-  width: 0px;
-  height: 0px;
-  overflow: clip;
+.sugnoma-hide{
+  clip-path: circle(0%);
+  @apply fixed;
+  /* @apply pointer-events-none; */
 }
 
-.body-show{
-  width: auto;
-  height: auto;
-  overflow: auto;
-  transition: width 0.3s, height 0.3s, ease;
+.sugnoma-show{
+  clip-path: circle(100%);
+  transition: clip-path 0.5s;
+  @apply block;
+  /* @apply pointer-events-auto; */
 }

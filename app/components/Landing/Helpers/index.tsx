@@ -19,8 +19,8 @@ const Helpers: React.FC<{
     const landingEl = $('#Landing');
     if(landingEl.length > 0){
       //make body 0x0px
-      $('body').addClass('body-hide');
-      $('body').removeClass('body-show');
+      $('.sugnoma').addClass('sugnoma-hide');
+      $('.sugnoma').removeClass('sugnoma-show');
 
       //move landing to back
       landingEl.addClass('-z-50');

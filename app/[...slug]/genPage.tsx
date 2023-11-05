@@ -7,7 +7,7 @@ import Italics from 'components/PageContent/Italics';
 import Bold from 'components/PageContent/Bold';
 import Img from 'components/PageContent/Img';
 import { El } from 'components/PageContent/type';
-import Landing from 'components/PageContent/Landing';
+import Landing from 'components/Landing';
 
 
 export function genPage(fullPath: string, slugPath: string): React.ReactNode {
@@ -56,16 +56,6 @@ export function genPage(fullPath: string, slugPath: string): React.ReactNode {
       const imgLineSplit = remainderChars(line).split('?');
       nodeArray.push(<>
         <Img slugPath={slugPath} fileName={imgLineSplit[0]} position={imgLineSplit[1]} previousEl={previousEl} key={indexLine}/>
-      </>);
-      previousEl = 'Img';
-    }
-    //if  '€ '  then <Landing>
-    else if(twoChars === '€ '){ 
-      const landingLineSplit = remainderChars(line).split('?');
-      nodeArray.push(<>
-        <Landing fileName={landingLineSplit[0]} key={indexLine}>
-          {landingLineSplit[1]}
-        </Landing>
       </>);
       previousEl = 'Img';
     }

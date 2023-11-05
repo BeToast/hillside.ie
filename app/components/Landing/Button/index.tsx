@@ -4,8 +4,8 @@ import $ from 'jquery';
 
 export const hideLanding = () => {
   console.log('go away');
-  $('body').addClass('body-show');
-  $('body').removeClass('body-hide');
+  $('.sugnoma').addClass('sugnoma-show');
+  $('.sugnoma').removeClass('sugnoma-hide');
   // $('#Landing').addClass('hidden');
 }
 
