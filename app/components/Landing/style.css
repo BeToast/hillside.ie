@@ -1,5 +1,5 @@
 #Landing-inner{
-  -webkit-mask-composite:destination-out;
+  -webkit-mask-composite:xor;
           mask-composite:exclude;
 }
 
