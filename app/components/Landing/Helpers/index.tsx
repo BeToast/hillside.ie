@@ -19,12 +19,16 @@ const Helpers: React.FC<{
     const landingEl = $('#Landing');
     if(landingEl.length > 0){
       //make body 0x0px
-      $('.sugnoma').addClass('sugnoma-hide');
-      $('.sugnoma').removeClass('sugnoma-show');
+      // $('.sugnoma').addClass('sugnoma-hide');
+      // $('.sugnoma').removeClass('sugnoma-show');
 
       //move landing to back
-      landingEl.addClass('-z-50');
-      landingEl.removeClass('z-50');
+      // landingEl.addClass('-z-50');
+      // landingEl.removeClass('z-50');
+
+
+      // landingEl.addClass('');
+      // landingEl.removeClass('');
     }
   }, []);
   

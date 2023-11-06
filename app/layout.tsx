@@ -45,7 +45,7 @@ export default function RootLayout({
         <Landing/>
 
         {/* Evernything else */}
-        <div className='sugnoma h-screen bg-grey-200'>
+        <div className='h-screen bg-grey-200'>
           {/* w is the screen - scrollbar gutter */}
           <div className="absolute top-0 left-0 w-[calc(100vw-14px)] font-body text-grey-950 bg-grey-200 selection:bg-ax1-300">
       

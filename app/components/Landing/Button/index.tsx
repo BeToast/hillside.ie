@@ -3,10 +3,12 @@
 import $ from 'jquery';
 
 export const hideLanding = () => {
-  console.log('go away');
-  $('.sugnoma').addClass('sugnoma-show');
-  $('.sugnoma').removeClass('sugnoma-hide');
-  // $('#Landing').addClass('hidden');
+  const landingOuterEl = $('#Landing-outer');
+  const landingInnerEl = $('#Landing-inner');
+  
+  landingOuterEl.addClass('pointer-events-none');
+  landingInnerEl.addClass('landing-inner-hide');
+  landingInnerEl.removeClass('landing-inner-show');
 }
 
 const Button: React.FC<{

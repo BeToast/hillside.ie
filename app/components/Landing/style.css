@@ -1,0 +1,14 @@
+#Landing-inner{
+  -webkit-mask-composite:destination-out;
+          mask-composite:exclude;
+}
+
+.landing-inner-show{
+  -webkit-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="0" stroke="black" /></svg>') 0/100% 100%, linear-gradient(#fff,#fff);
+          mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="0" stroke="black" /></svg>') 0/100% 100%, linear-gradient(#fff,#fff);
+}
+
+.landing-inner-hide{
+  -webkit-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="300" stroke="black" /></svg>') 0/100% 100%, linear-gradient(#fff,#fff);
+          mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="300" stroke="black" /></svg>') 0/100% 100%, linear-gradient(#fff,#fff);
+}

@@ -33,16 +33,3 @@
 ::-webkit-scrollbar-thumb:hover { 
   @apply bg-grey-700 ;
 }
-
-.sugnoma-hide{
-  clip-path: circle(0%);
-  @apply fixed;
-  /* @apply pointer-events-none; */
-}
-
-.sugnoma-show{
-  clip-path: circle(100%);
-  transition: clip-path 0.5s;
-  @apply block;
-  /* @apply pointer-events-auto; */
-}
