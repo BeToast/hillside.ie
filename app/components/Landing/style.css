@@ -1,14 +1,35 @@
+:root {
+   --r: 50;
+}
+
 #Landing-inner{
-  -webkit-mask-composite:xor;
-          mask-composite:exclude;
+   -webkit-mask-composite:xor;
+      mask-composite:exclude;
+      mask-repeat: no-repeat;
 }
 
 .landing-inner-show{
-  -webkit-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="0" stroke="black" /></svg>') 0/100% 100%, linear-gradient(#fff,#fff);
-          mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="0" stroke="black" /></svg>') 0/100% 100%, linear-gradient(#fff,#fff);
+   -webkit-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="0" stroke="black" /></svg>') 0/100% 100%, linear-gradient(#fff,#fff);
+   
+   /* -webkit-mask: image(circle(100px)) center/20% 20%, linear-gradient(#fff,#fff); */
+         mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="0" stroke="black" /></svg>') center/100% 100%, linear-gradient(#fff,#fff);
 }
 
+/* .landing-inner-show{
+   -webkit-mask-clip: border-box;
+   -webkit-mask-composite: xor;
+   -webkit-mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="20" stroke="black" /></svg>');
+   -webkit-mask-origin: border-box;
+   -webkit-mask-position: center;
+   -webkit-mask-size: 100%;
+
+
+
+
+         mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="0" stroke="black" /></svg>') 0/100% 100%, linear-gradient(#fff,#fff);
+} */
+
 .landing-inner-hide{
-  -webkit-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="300" stroke="black" /></svg>') 0/100% 100%, linear-gradient(#fff,#fff);
-          mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="300" stroke="black" /></svg>') 0/100% 100%, linear-gradient(#fff,#fff);
+   -webkit-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="300" stroke="black" /></svg>') 0/100% 100%, linear-gradient(#fff,#fff);
+         mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="300" stroke="black" /></svg>') 0/100% 100%, linear-gradient(#fff,#fff);
 }
