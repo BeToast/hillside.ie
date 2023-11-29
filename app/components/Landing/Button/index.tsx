@@ -19,7 +19,7 @@ const Button: React.FC<{
       return (<>
          <button
             onClick={hideLanding}
-            className="p-2 rounded-lg bg-pri-200 hover:bg-pri-300 shadow-sm"
+            className="p-2 rounded-lg bg-pri-200 hover:bg-pri-300 shadow-sm text-lg"
          >
             go to website (obv this is just filler text)
          </button>
