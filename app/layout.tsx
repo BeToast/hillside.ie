@@ -53,15 +53,18 @@ export default function RootLayout({
                      Hillside Evangelical Church, Greystones
                   </Header>
 
-                  <div className='flex justify-center items-start z-0 bg-inherit pr-64'>
+                  <Nav />
+                  
+                  <div className='w-full px-64'>
+                  {children}
+                  </div>
+
+                  {/* <div className='flex justify-center items-start z-0 bg-inherit pr-64'>
                      <div className='nav-scroll sticky top-0 hidden lg:block w-64 h-screen overflow-y-auto'>
                         <Nav />
                      </div>
-                     {children}
-                     {/* <div className='nav-scroll sticky top-0 hidden xl:block w-64 h-screen overflow-y-auto'>
-                        
-                     </div> */}
-                  </div>
+                     
+                  </div> */}
 
                </div>
             </div>

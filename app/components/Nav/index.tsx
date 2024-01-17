@@ -58,14 +58,20 @@ const Nav: React.FC<{
 
 }) => {
       return (<>
-         <div className="flex-col flex-nowrap p-8">
-            {routeArray.sort((a, b) => a.key.localeCompare(b.key)).map(route => (
-               <RouteSection
-                  key={route.key}
-                  route={route}
-               />
-            ))}
+         <div className='sticky top-0 '>
+            <div className='nav-scroll absolute hidden lg:block w-64 h-screen overflow-y-auto'>
+               <div className="flex-col flex-nowrap p-8">
+                  {routeArray.sort((a, b) => a.key.localeCompare(b.key)).map(route => (
+                     <RouteSection
+                        key={route.key}
+                        route={route}
+                     />
+                  ))}
+               </div>     
+            </div> 
          </div>
+
+         
       </>);
    }
 
