@@ -1,4 +1,5 @@
 import { readFileSync } from 'fs';
+
 import H1 from 'components/PageContent/H1';
 import H2 from 'components/PageContent/H2';
 import Li from 'components/PageContent/Li';
@@ -6,22 +7,29 @@ import P from 'components/PageContent/P';
 import Italics from 'components/PageContent/Italics';
 import Bold from 'components/PageContent/Bold';
 import Img from 'components/PageContent/Img';
-// import { El } from 'components/PageContent/type';
 import Block from 'components/PageContent/Block';
-import { getPreviousEl, setPreviousEl } from './helpers/previousEl';
-import { getSlugPath, setSlugPath } from './helpers/slugPath';
+
+import { El } from 'components/PageContent/type';
+
+
+//globals :/
+//i think its better than passing them down through function calls in this case
+var iG: number;
+var slugPathGlobal: string;
+var previousElGlobal: El;
 
 
 export function genPage(fullPath: string, slugPath: string): React.ReactNode {
-   setSlugPath(slugPath); //store in seperate ts file
+   slugPathGlobal = slugPath;
 
    const content = readFileSync(fullPath, 'utf-8');
    const nodeArray: React.ReactNode[] = [];
 
    const lineArray: string[] = content.split('\n'); //get an array of strings representing each line in content.md
 
-   for(var i = 0; i < lineArray.length; i++){ //for loop for length of lineArray
-      let line = lineArray[i].trim(); //get current line and trim
+   for(iG = 0; iG < lineArray.length; iG++){ //for loop for length of lineArray#
+
+      let line = lineArray[iG].trim(); //get current line and trim
 
       const twoChars = line.slice(0, 2);  // get both 2 and 3 chars
       const threeChars = line.slice(0, 3);// ik both wont be used which is inneficient :/ 
@@ -31,75 +39,85 @@ export function genPage(fullPath: string, slugPath: string): React.ReactNode {
          const headLineSplit = remainderChars(line).split('?');
          nodeArray.push(<>
             <Block>
-               <H1 key={i} hideHrAtTop={headLineSplit[1]}>{boldItalics(headLineSplit[0])}</H1>
+               <H1 key={iG} hideHrAtTop={headLineSplit[1]}>{boldItalics(headLineSplit[0])}</H1>
             </Block>
          </>);
-         // previousEl = 'H1';
+         previousElGlobal = 'H1';
       }
       else if (threeChars === '## ') {
-         const returnNode = (<>
+         nodeArray.push(<>
             <Block>
-               <H2 key={i}>{boldItalics(remainderChars(line, 3))}</H2>
-               {getBlockContent(lineArray, i)}
+               <H2 key={iG}>{boldItalics(remainderChars(line, 3))}</H2>
+               {getBlockContent(lineArray)}
             </Block>
          </>);
-         // previousEl = 'H2';
-         return(returnNode);
+         previousElGlobal = 'H2';
+      }
+      else if (twoChars === '£ ') {
+         const imgLineSplit = remainderChars(line).split('?');
+         nodeArray.push(<>
+            <Img slugPath={slugPathGlobal} fileName={imgLineSplit[0]} position={imgLineSplit[1]} previousEl={previousElGlobal} key={iG} />
+         </>);
+         previousElGlobal = 'Img';
+      }
+      else if (line !== '') {
+         throw console.warn(`\u001B[93m unprocessed line outside of block!\n  file: ${slugPath}\n  index: ${iG}\n`);
       }
    }
-
-
    return nodeArray;
-
-   
 }
 
-const getBlockContent = (lineArray: string[], i: number): React.ReactNode => {
-   i++; //increment because it has not been incremented yet in parent function.
+const getBlockContent = (lineArray: string[]): React.ReactNode => {
+   
    const nodeArray: React.ReactNode[] = [];
 
-   for(;;){
-      const line = lineArray[i].trim();
+   for(iG++; iG < lineArray.length; iG++){ //loop forever
+            //it has not been incremented yet in the parent function.
+
+      if(lineArray[iG] === undefined){ break; } //break if end of file
+      const line = lineArray[iG].trim(); //read line and trim whitespace
+      if(line === '') { continue; } //continue if line empty
+
       const twoChars = line.slice(0, 2);
       const threeChars = line.slice(0, 3);
 
       if(threeChars === '## '){ //check if block should end
-         i--; //decrement i so we read same line again in parent function.
-         return nodeArray;
+         iG--; //decrement i so we read same line again in parent function.
+         break;
       }
       else
       {
-         nodeArray.push(lineToNode(twoChars, line, i))
+         nodeArray.push(lineToNode(twoChars, line));
       }
    }
+   return nodeArray;
 }
 
-const lineToNode = (twoChars: string, line: string, lineKey: number): React.ReactNode => {
+const lineToNode = (twoChars: string, line: string): React.ReactNode => {
    //if  '- '  then <Li>
    if (twoChars === '- ') {
       const returnNode=(<>
-         <Li key={lineKey}>{boldItalics(remainderChars(line))}</Li>
+         <Li key={iG}>{boldItalics(remainderChars(line))}</Li>
       </>);
-      setPreviousEl('Li');
+      previousElGlobal = 'Li';
       return returnNode;
    }
-   //if  '# '  then <H1>
 
    //if  '£ '  then <Img>
    else if (twoChars === '£ ') {
       const imgLineSplit = remainderChars(line).split('?');
       const returnNode = (<>
-         <Img slugPath={getSlugPath()} fileName={imgLineSplit[0]} position={imgLineSplit[1]} previousEl={getPreviousEl()} key={lineKey} />
+         <Img slugPath={slugPathGlobal} fileName={imgLineSplit[0]} position={imgLineSplit[1]} previousEl={previousElGlobal} key={iG} />
       </>);
-      setPreviousEl('Img');
+      previousElGlobal = 'Img';
       return(returnNode);
    }
    //else its a <P> if line is not empty
    else if (line !== '') {
       const returnNode = (<>
-         <P key={lineKey}>{boldItalics(line)}</P>
+         <P key={iG}>{boldItalics(line)}</P>
       </>);
-      setPreviousEl('P');
+      previousElGlobal = 'P';
       return returnNode;
    }
 }
