@@ -56,7 +56,7 @@ export default function RootLayout({
                   <Nav />
                   
                   <div className='w-full px-64'>
-                  {children}
+                     {children}
                   </div>
 
                   {/* <div className='flex justify-center items-start z-0 bg-inherit pr-64'>
