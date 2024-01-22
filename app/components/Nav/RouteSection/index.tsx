@@ -3,25 +3,25 @@ import HeadRoute from './HeadRoute';
 import SubRoute from './SubRoute';
 
 const RouteSection: React.FC<{
-  route: Route;
+   route: Route;
 }> = ({
-  route,
+   route,
 }) => {
-  return(<>
-    <HeadRoute
-      route={route}
-      clickable={false}
-    />
-    <div className=''>
-    {route.subRoute.map(sub => (
-      <SubRoute
-        key={route.route}
-        headRouteUrl={route.route}
-        route={sub}
-      />
-    ))}
-    </div>
-  </>);
-}
+      return (<>
+         <HeadRoute
+            route={route}
+            clickable={false}
+         />
+         <div className=''>
+            {route.subRoute.map(sub => (
+               <SubRoute
+                  key={route.route}
+                  headRouteUrl={route.route}
+                  route={sub}
+               />
+            ))}
+         </div>
+      </>);
+   }
 
 export default RouteSection;
