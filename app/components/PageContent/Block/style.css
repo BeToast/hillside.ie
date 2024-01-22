@@ -1,0 +1,8 @@
+.block{
+   @apply odd:bg-grey-100;
+
+
+
+   @apply even:bg-grey-700;
+   @apply even:text-grey-200;
+}
