@@ -55,7 +55,7 @@ export default function RootLayout({
 
                   <Nav />
                   
-                  <div className='w-full px-64'>
+                  <div className='w-full'>
                      {children}
                   </div>
 

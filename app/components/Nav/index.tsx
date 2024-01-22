@@ -58,9 +58,11 @@ const Nav: React.FC<{
 
 }) => {
       return (<>
-         <div className='sticky top-0 '>
+      {/* position and scroll divs */}
+         <div className='sticky top-0 z-50'>
             <div className='nav-scroll absolute hidden lg:block w-64 h-screen overflow-y-auto'>
-               <div className="flex-col flex-nowrap p-8">
+               {/* actual box */}
+               <div className="group transition-all flex-col flex-nowrap m-4 p-4 hover:p-6 hover:m-2 bg-grey-200 hover:bg-grey-300 bg-opacity-50 hover:bg-opacity-80 hover:shadow-md rounded-md backdrop-blur-lg">
                   {routeArray.sort((a, b) => a.key.localeCompare(b.key)).map(route => (
                      <RouteSection
                         key={route.key}

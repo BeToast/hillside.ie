@@ -17,7 +17,7 @@ export default function Page({ params }: { params: Slug }) {
    const mainId = params.slug[params.slug.length - 1]; //get the leaf of the path for main id
 
    return (<>
-      <main id={mainId} className='w-full px-20 pb-16 bg-inherit'>
+      <main id={mainId} className='w-full bg-inherit'>
          {genPage(`${contentPath + slugPath}content.md`, slugPath)}
       </main>
       <DynamicScrollHandler mainId={mainId} />
