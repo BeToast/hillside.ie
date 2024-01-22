@@ -38,9 +38,9 @@ export function genPage(fullPath: string, slugPath: string): React.ReactNode {
       if (twoChars === '# ') {
          const headLineSplit = remainderChars(line).split('?');
          nodeArray.push(<>
-            <Block>
+            {/* <Block className='sticky top-0 bg-inherit'>
                <H1 key={iG} hideHrAtTop={headLineSplit[1]}>{boldItalics(headLineSplit[0])}</H1>
-            </Block>
+            </Block> */}
          </>);
          previousElGlobal = 'H1';
       }
