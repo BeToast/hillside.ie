@@ -18,7 +18,7 @@ export default function Page({ params }: { params: Slug }) {
 
    return (<>
       <main id={mainId} className='w-full bg-inherit'>
-            {genPage(`${contentPath + slugPath}content.md`, slugPath)}
+            {/* {genPage(`${contentPath + slugPath}content.md`, slugPath)} */}
       </main>
       <DynamicScrollHandler mainId={mainId} />
    </>);
