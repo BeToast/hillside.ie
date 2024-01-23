@@ -1,5 +1,5 @@
 main > *{
-   @apply pl-64;
+   @apply lg:pl-64;
 }
 
 /* selected 1st and 2nd elements */

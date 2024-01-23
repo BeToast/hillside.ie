@@ -1,0 +1,17 @@
+:root{
+   --slant-y-size: 10vw;
+}
+
+.slantbox {
+   @apply py-[var(--slant-y-size)];
+   @apply bg-grey-900;
+   @apply w-full;
+   clip-path: polygon(
+      0 var(--slant-y-size),
+      100% 0%,
+      100% calc(100% - var(--slant-y-size)),
+      0% 100%
+   );
+
+   @apply text-grey-100;
+}
