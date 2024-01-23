@@ -8,7 +8,7 @@ const componame: React.FC<{
    children,
 }) => {
    return(<>
-      <div className={`${className}+ block pl-64`}>
+      <div className={`${className}`}>
          {children}
       </div>
    </>);

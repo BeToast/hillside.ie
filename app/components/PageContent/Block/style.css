@@ -1,8 +1,29 @@
-.block{
+main > *{
+   @apply pl-64;
+}
+
+/* selected 1st and 2nd elements */
+/* main > *:nth-child(4n-3),
+main > *:nth-child(4n-2){
+   @apply bg-pri-800;
+   @apply text-grey-200;
+} */
+
+/* selected 3rd and 4th elements */
+/* main > *:nth-child(4n-1),
+main > *:nth-child(4n){
+   @apply bg-grey-100;
+   @apply text-grey-900;
+} */
+
+
+
+/* .block{
    @apply odd:bg-grey-100;
 
 
 
-   @apply even:bg-grey-700;
+   @apply even:bg-pri-800;
    @apply even:text-grey-200;
-}
+} */
+

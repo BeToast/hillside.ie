@@ -46,8 +46,8 @@ export function genPage(fullPath: string, slugPath: string): React.ReactNode {
       }
       else if (threeChars === '## ') {
          nodeArray.push(<>
+            <H2 key={iG}>{boldItalics(remainderChars(line, 3))}</H2>
             <Block>
-               <H2 key={iG}>{boldItalics(remainderChars(line, 3))}</H2>
                {getBlockContent(lineArray)}
             </Block>
          </>);
