@@ -1,13 +1,13 @@
 const P: React.FC<{
-  children: React.ReactNode,
+   children: React.ReactNode,
 }> = ({
-  children,
+   children,
 }) => {
-  return(<>
-    <div className="P text-base text-justify leading-loose hyphens-auto max-w-text pb-1 px-4">
-      {children}
-    </div>
-  </>);
-}
+      return (<>
+         <div className="P text-base text-justify leading-loose hyphens-auto max-w-text">
+            {children}
+         </div>
+      </>);
+   }
 
 export default P;
