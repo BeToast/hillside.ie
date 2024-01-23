@@ -16,7 +16,7 @@ const SubRoute: React.FC<{
 
       return (<>
          <Link href={fullRoute}>
-            <div className="rounded-xl mb-[1px] text-grey-800 group-hover:text-grey-950 hover:text-grey-900 hover:bg-grey-100 active:bg-grey-300 active:text-grey-950 ">
+            <div className="rounded-xl mb-[1px] text-grey-800 group-hover/nav:text-grey-950 hover:text-grey-900 hover:bg-grey-100 active:bg-grey-300 active:text-grey-950 ">
                <ActiveLinkStyle
                   route={fullRoute}
                >
