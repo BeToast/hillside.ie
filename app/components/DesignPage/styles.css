@@ -1,6 +1,15 @@
+:root{
+   --slant-y-size: 10vw;
+}
+
 .slantyboi {
-   @apply py-64;
-   @apply bg-pri-800;
+   @apply py-[var(--slant-y-size)];
+   @apply bg-grey-900;
    @apply w-full;
-   clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0% 100%);
+   clip-path: polygon(
+      0 var(--slant-y-size),
+      100% 0%,
+      100% calc(100% - var(--slant-y-size)),
+      0% 100%
+   );
 }
