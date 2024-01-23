@@ -7,6 +7,7 @@ import { pathFromArray } from 'helpers/pathHandler';
 
 // scroll  handler
 import dynamic from 'next/dynamic'
+import DesignPage from '../components/DesignPage';
 const DynamicScrollHandler = dynamic(() => import('components/ScrollHandler'), {
    ssr: false,
 });
@@ -19,6 +20,7 @@ export default function Page({ params }: { params: Slug }) {
    return (<>
       <main id={mainId} className='w-full bg-inherit'>
             {/* {genPage(`${contentPath + slugPath}content.md`, slugPath)} */}
+            <DesignPage/>
       </main>
       <DynamicScrollHandler mainId={mainId} />
    </>);

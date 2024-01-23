@@ -1,0 +1,6 @@
+.slantyboi {
+   @apply py-64;
+   @apply bg-pri-800;
+   @apply w-full;
+   clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0% 100%);
+}
